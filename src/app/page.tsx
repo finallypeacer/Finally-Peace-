@@ -134,8 +134,8 @@ export default function Home() {
             <a href="#how">How it works</a>
             <a href="#getapp">Get the app</a>
             <a href="#faq">FAQ</a>
-            <a href="#join" className="btn btn-nav">
-              Get started
+            <a href="/app" className="btn btn-nav">
+              Open the app
             </a>
           </div>
         </div>
@@ -1001,6 +1001,9 @@ export default function Home() {
                 <li>Always up to date — nothing to update manually</li>
               </ul>
               <InstallApp />
+              <a href="/app" className="getapp-open-link">
+                Or open the app in your browser →
+              </a>
             </div>
 
             <div className="getapp-visual">
