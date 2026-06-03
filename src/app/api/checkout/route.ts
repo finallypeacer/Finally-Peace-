@@ -47,7 +47,7 @@ export async function POST(request: Request) {
                 product_data: {
                   name: "QuietWorld Subscription",
                   description:
-                    "End-of-life insurance subscription — funeral, legal, debt, and transportation, all included.",
+                    "End-of-life coverage subscription — funeral, legal, debt, and transportation, all included.",
                 },
               },
             },

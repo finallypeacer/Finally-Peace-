@@ -22,14 +22,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://quietworld.com"),
   title: "QuietWorld — A subscription for what comes next.",
   description:
-    "End-of-life insurance, rebuilt as one simple $25/month subscription. Funeral, legal, debt, and transportation — all included, so your family never has to plan a funeral on the worst week of their life.",
+    "End-of-life coverage, rebuilt as one simple $25/month subscription. Funeral, legal, debt, and transportation — all included, so your family never has to plan a funeral on the worst week of their life.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "QuietWorld — $25 a month. For what comes next.",
     description:
-      "End-of-life insurance, rebuilt as one simple subscription. Funeral, legal, debt, transportation — all included.",
+      "End-of-life coverage, rebuilt as one simple subscription. Funeral, legal, debt, transportation — all included.",
     type: "website",
     url: "https://quietworld.com",
     siteName: "QuietWorld",

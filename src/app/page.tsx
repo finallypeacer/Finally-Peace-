@@ -154,7 +154,7 @@ export default function Home() {
                 For <span className="serif">what comes next.</span>
               </h1>
               <p className="hero-sub">
-                End-of-life insurance, rebuilt as one simple subscription.
+                End-of-life coverage, rebuilt as one simple subscription.
                 Funeral, legal, debt, transportation — all included. So your
                 family never has to plan a funeral on the worst week of their
                 life.
@@ -200,7 +200,7 @@ export default function Home() {
         <div className="container">
           <div className="trust-label">
             <span className="dot"></span>Partnered with leading Canadian
-            insurance carriers<span className="dot"></span>
+            carriers<span className="dot"></span>
           </div>
           <div className="trust-logos">
             <div className="trust-logo">
@@ -208,8 +208,8 @@ export default function Home() {
               <div className="trust-logo-tag">Tier 1 Canadian life carrier</div>
             </div>
             <div className="trust-logo">
-              <div className="trust-logo-name">Reinsurance partner</div>
-              <div className="trust-logo-tag">Global specialty reinsurer</div>
+              <div className="trust-logo-name">Risk partner</div>
+              <div className="trust-logo-tag">Global specialty risk partner</div>
             </div>
             <div className="trust-logo">
               <div className="trust-logo-name">Funeral network</div>
@@ -221,7 +221,7 @@ export default function Home() {
             </div>
           </div>
           <div className="trust-disclaimer">
-            All policies are issued by a licensed Canadian insurance carrier.
+            All policies are issued by a licensed Canadian carrier.
             Concierge and debt-restructuring services are delivered through
             QuietWorld&apos;s vetted partner network.
           </div>
@@ -268,7 +268,7 @@ export default function Home() {
               families aren&apos;t ready for.
             </h2>
             <p className="section-sub">
-              Final-expense insurance exists. But it&apos;s sold through
+              Final-expense coverage exists. But it&apos;s sold through
               50-year-old agent networks, marketed to seniors only, and
               impossible to understand.
             </p>
@@ -283,7 +283,7 @@ export default function Home() {
             </div>
             <div className="problem-card">
               <h3>
-                Existing insurance is built for someone your grandparents&apos;
+                Existing coverage is built for someone your grandparents&apos;
                 age.
               </h3>
               <p>
@@ -575,7 +575,7 @@ export default function Home() {
             <div className="section-eyebrow">Compare</div>
             <h2 className="section-title">
               QuietWorld vs{" "}
-              <span className="serif">traditional insurance.</span>
+              <span className="serif">traditional coverage.</span>
             </h2>
             <p className="section-sub">
               A 50-year-old product, sold the same way for 50 years. We rebuilt
@@ -668,7 +668,7 @@ export default function Home() {
               Three steps. <span className="serif">Done in minutes.</span>
             </h2>
             <p className="section-sub">
-              From signup to a real, licensed life insurance policy in your name
+              From signup to a real, licensed coverage plan in your name
               — without a single phone call.
             </p>
           </div>
@@ -693,7 +693,7 @@ export default function Home() {
               <div className="step-num">3</div>
               <h3>Ready for life — your future is secured</h3>
               <p>
-                Real life insurance, issued and active. We&apos;re here the day
+                Real coverage, issued and active. We&apos;re here the day
                 your family needs us. Until then — live your life.
               </p>
             </div>
@@ -707,7 +707,7 @@ export default function Home() {
           <div className="section-head-center">
             <div className="section-eyebrow">Why QuietWorld</div>
             <h2 className="section-title">
-              Real insurance. <span className="serif">Real service.</span>
+              Real coverage. <span className="serif">Real service.</span>
             </h2>
             <p className="section-sub">
               Built differently from the inside out — but with a 90-year-old
@@ -720,7 +720,7 @@ export default function Home() {
               <h3>Backed by a real carrier</h3>
               <p>
                 Your policy is underwritten by a licensed Canadian life
-                insurance carrier. Capital reserves, regulator oversight, the
+                carrier. Capital reserves, regulator oversight, the
                 works. We handle the experience; they handle the underwriting.
               </p>
             </div>
@@ -737,7 +737,7 @@ export default function Home() {
               <div className="why-icon">📱</div>
               <h3>Built for who you are now</h3>
               <p>
-                Final-expense insurance has been sold the same way for 50 years
+                Final-expense coverage has been sold the same way for 50 years
                 — door-to-door agents and senior TV ads. QuietWorld is the first
                 version made for someone who buys things on their phone.
               </p>
@@ -800,7 +800,7 @@ export default function Home() {
             <div className="voice-card">
               <div className="voice-stars">★ ★ ★ ★ ★</div>
               <div className="voice-quote">
-                &quot;I tried to buy final-expense insurance two years ago. A man
+                &quot;I tried to buy final-expense coverage two years ago. A man
                 in a suit came to my apartment for two hours. I bought QuietWorld
                 in a coffee shop on my phone. That&apos;s the entire pitch.&quot;
               </div>
@@ -819,7 +819,7 @@ export default function Home() {
               <div className="voice-stars">★ ★ ★ ★ ★</div>
               <div className="voice-quote">
                 &quot;I&apos;m 56 and just signed up for QuietWorld. I stopped
-                thinking of insurance as paperwork and started thinking of it as
+                thinking of coverage as paperwork and started thinking of it as
                 part of my life.&quot;
               </div>
               <div className="voice-author">
@@ -883,15 +883,15 @@ export default function Home() {
           <div className="faq-list">
             <details className="faq-item">
               <summary className="faq-q">
-                Is this real insurance or just a savings plan?
+                Is this real coverage or just a savings plan??
               </summary>
               <div className="faq-a">
-                Real insurance. Every QuietWorld subscription includes a
-                licensed life insurance policy in your name, issued by a
+                Real coverage. Every QuietWorld subscription includes a
+                licensed coverage plan in your name, issued by a
                 regulated Canadian carrier. The subscription wraps the policy
                 with our service layer — funeral arrangements, repatriation,
                 concierge, AI memorial — but the underlying product is regulated
-                final-expense life insurance.
+                final-expense coverage.
               </div>
             </details>
             <details className="faq-item">
@@ -940,7 +940,7 @@ export default function Home() {
               </summary>
               <div className="faq-a">
                 QuietWorld requires you to be cognitively healthy at the time you
-                enroll — this is standard for any final-expense insurance
+                enroll — this is standard for any final-expense coverage
                 product. The 5-question health quiz at signup includes a brief
                 cognitive screen.
               </div>
@@ -1050,7 +1050,7 @@ export default function Home() {
       {/* ============ FOOTER ============ */}
       <footer>
         <div className="container">
-          <div>© 2026 QuietWorld Insurance Services Inc. · Toronto, Canada</div>
+          <div>© 2026 QuietWorld Services Inc. · Toronto, Canada</div>
           <div className="foot-links">
             <a href="#">Terms</a>
             <a href="#">Privacy</a>
