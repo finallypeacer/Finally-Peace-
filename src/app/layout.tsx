@@ -20,25 +20,25 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://quietworld.com"),
-  title: "QuietWorld — A subscription for what comes next.",
+  metadataBase: new URL("https://finally-peace.com"),
+  title: "Finally Peace — A subscription for what comes next.",
   description:
     "End-of-life coverage, rebuilt as one simple $15/month subscription. Funeral, legal, debt, and transportation — all included, so your family never has to plan a funeral on the worst week of their life.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "QuietWorld — $15 a month. For what comes next.",
+    title: "Finally Peace — $15 a month. For what comes next.",
     description:
       "End-of-life coverage, rebuilt as one simple subscription. Funeral, legal, debt, transportation — all included.",
     type: "website",
-    url: "https://quietworld.com",
-    siteName: "QuietWorld",
+    url: "https://finally-peace.com",
+    siteName: "Finally Peace",
   },
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
-    title: "QuietWorld",
+    title: "Finally Peace",
     statusBarStyle: "black-translucent",
   },
   icons: {

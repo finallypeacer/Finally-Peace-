@@ -106,7 +106,7 @@ export default function Home() {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan: "quietworld" }),
+        body: JSON.stringify({ plan: "finally-peace" }),
       });
       const data = (await res.json()) as { url?: string; error?: string };
       if (data.url) {
@@ -129,7 +129,7 @@ export default function Home() {
       {/* ============ NAV ============ */}
       <nav>
         <div className="nav-inner">
-          <div className="logo">QuietWorld</div>
+          <div className="logo">Finally Peace</div>
           <div className="nav-links">
             <a href="#easy">What you get</a>
             <a href="#plans">The plan</a>
@@ -195,7 +195,7 @@ export default function Home() {
                 cash. I never want my kids to feel that.&quot;
               </div>
               <div className="quote-attr">
-                — What every QuietWorld member eventually tells us.
+                — What every Finally Peace member eventually tells us.
               </div>
             </div>
           </div>
@@ -215,10 +215,6 @@ export default function Home() {
               <div className="trust-logo-tag">Tier 1 Canadian life carrier</div>
             </div>
             <div className="trust-logo">
-              <div className="trust-logo-name">Risk partner</div>
-              <div className="trust-logo-tag">Global specialty risk partner</div>
-            </div>
-            <div className="trust-logo">
               <div className="trust-logo-name">Funeral network</div>
               <div className="trust-logo-tag">100+ Canadian providers</div>
             </div>
@@ -230,7 +226,7 @@ export default function Home() {
           <div className="trust-disclaimer">
             All policies are issued by a licensed Canadian carrier.
             Concierge and debt-restructuring services are delivered through
-            QuietWorld&apos;s vetted partner network.
+            Finally Peace&apos;s vetted partner network.
           </div>
         </div>
       </section>
@@ -599,7 +595,7 @@ export default function Home() {
           <div className="section-head-center">
             <div className="section-eyebrow">Compare</div>
             <h2 className="section-title">
-              QuietWorld vs{" "}
+              Finally Peace vs{" "}
               <span className="serif">traditional coverage.</span>
             </h2>
             <p className="section-sub">
@@ -612,7 +608,7 @@ export default function Home() {
             <div className="compare-row compare-head">
               <div></div>
               <div className="col-old">Traditional final expense</div>
-              <div className="col-atlas">QuietWorld</div>
+              <div className="col-atlas">Finally Peace</div>
             </div>
 
             <div className="compare-row">
@@ -655,7 +651,7 @@ export default function Home() {
                 week of their life
               </div>
               <div className="col-atlas">
-                <span className="ic-check">✓</span>One QuietWorld concierge,
+                <span className="ic-check">✓</span>One Finally Peace concierge,
                 end-to-end
               </div>
             </div>
@@ -728,7 +724,7 @@ export default function Home() {
       <section id="why">
         <div className="container">
           <div className="section-head-center">
-            <div className="section-eyebrow">Why QuietWorld</div>
+            <div className="section-eyebrow">Why Finally Peace</div>
             <h2 className="section-title">
               Real coverage. <span className="serif">Real service.</span>
             </h2>
@@ -751,7 +747,7 @@ export default function Home() {
               <div className="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
               <h3>Concierge, not a call center</h3>
               <p>
-                When your family calls QuietWorld, they get one real person who
+                When your family calls Finally Peace, they get one real person who
                 handles everything: funeral home, casket, transport, paperwork,
                 even the cleanup of your apartment.
               </p>
@@ -760,9 +756,9 @@ export default function Home() {
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.37 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                   1-855-478-4569
                 </a>
-                <a href="mailto:support@quietworld.com" className="why-contact-link">
+                <a href="mailto:FinallyPeacer@gmail.com" className="why-contact-link">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  support@quietworld.com
+                  FinallyPeacer@gmail.com
                 </a>
                 <span className="why-contact-hours">Available 24/7</span>
               </div>
@@ -772,7 +768,7 @@ export default function Home() {
               <h3>Built for who you are now</h3>
               <p>
                 Final-expense coverage has been sold the same way for 50 years
-                — door-to-door agents and senior TV ads. QuietWorld is the first
+                — door-to-door agents and senior TV ads. Finally Peace is the first
                 version made for someone who buys things on their phone.
               </p>
             </div>
@@ -790,7 +786,7 @@ export default function Home() {
               <span className="serif">stopped avoiding it.</span>
             </h2>
             <p className="section-sub">
-              Early QuietWorld members. Real conversations from our beta — names
+              Early Finally Peace members. Real conversations from our beta — names
               changed where requested.
             </p>
           </div>
@@ -798,7 +794,7 @@ export default function Home() {
             <div className="voice-card">
               <div className="voice-stars">★ ★ ★ ★ ★</div>
               <div className="voice-quote">
-                &quot;I&apos;d been putting this off for four years. QuietWorld
+                &quot;I&apos;d been putting this off for four years. Finally Peace
                 took twelve minutes. I cried a little after I hit submit — not
                 because it was sad, just because it was finally done.&quot;
               </div>
@@ -807,7 +803,7 @@ export default function Home() {
                 <div>
                   <div className="voice-name">Maya R., 42</div>
                   <div className="voice-meta">
-                    Toronto · QuietWorld subscriber
+                    Toronto · Finally Peace subscriber
                   </div>
                 </div>
               </div>
@@ -816,7 +812,7 @@ export default function Home() {
             <div className="voice-card">
               <div className="voice-stars">★ ★ ★ ★ ★</div>
               <div className="voice-quote">
-                &quot;My dad has early-onset Alzheimer&apos;s. QuietWorld is the
+                &quot;My dad has early-onset Alzheimer&apos;s. Finally Peace is the
                 first product I&apos;ve ever seen that quietly handles the
                 things you don&apos;t want to think about.&quot;
               </div>
@@ -825,7 +821,7 @@ export default function Home() {
                 <div>
                   <div className="voice-name">Jordan K., 38</div>
                   <div className="voice-meta">
-                    Vancouver · QuietWorld subscriber
+                    Vancouver · Finally Peace subscriber
                   </div>
                 </div>
               </div>
@@ -835,7 +831,7 @@ export default function Home() {
               <div className="voice-stars">★ ★ ★ ★ ★</div>
               <div className="voice-quote">
                 &quot;I tried to buy final-expense coverage two years ago. A man
-                in a suit came to my apartment for two hours. I bought QuietWorld
+                in a suit came to my apartment for two hours. I bought Finally Peace
                 in a coffee shop on my phone. That&apos;s the entire pitch.&quot;
               </div>
               <div className="voice-author">
@@ -843,7 +839,7 @@ export default function Home() {
                 <div>
                   <div className="voice-name">Sarah P., 51</div>
                   <div className="voice-meta">
-                    Calgary · QuietWorld subscriber
+                    Calgary · Finally Peace subscriber
                   </div>
                 </div>
               </div>
@@ -852,7 +848,7 @@ export default function Home() {
             <div className="voice-card">
               <div className="voice-stars">★ ★ ★ ★ ★</div>
               <div className="voice-quote">
-                &quot;I&apos;m 56 and just signed up for QuietWorld. I stopped
+                &quot;I&apos;m 56 and just signed up for Finally Peace. I stopped
                 thinking of coverage as paperwork and started thinking of it as
                 part of my life.&quot;
               </div>
@@ -861,7 +857,7 @@ export default function Home() {
                 <div>
                   <div className="voice-name">David L., 56</div>
                   <div className="voice-meta">
-                    Montréal · QuietWorld subscriber
+                    Montréal · Finally Peace subscriber
                   </div>
                 </div>
               </div>
@@ -870,7 +866,7 @@ export default function Home() {
             <div className="voice-card">
               <div className="voice-stars">★ ★ ★ ★ ★</div>
               <div className="voice-quote">
-                &quot;When my mom passed last fall, QuietWorld handled the
+                &quot;When my mom passed last fall, Finally Peace handled the
                 funeral home, the casket, transport from Florida, and the
                 apartment cleanout. I made one phone call. They handled the
                 rest.&quot;
@@ -880,7 +876,7 @@ export default function Home() {
                 <div>
                   <div className="voice-name">Anna T., 47</div>
                   <div className="voice-meta">
-                    Ottawa · Daughter of a QuietWorld subscriber
+                    Ottawa · Daughter of a Finally Peace subscriber
                   </div>
                 </div>
               </div>
@@ -889,7 +885,7 @@ export default function Home() {
             <div className="voice-card voice-card-cta">
               <div className="voice-stars">★ ★ ★ ★ ★</div>
               <div className="voice-quote">
-                &quot;QuietWorld is the rare product that makes you feel less
+                &quot;Finally Peace is the rare product that makes you feel less
                 alone.&quot;
               </div>
               <div className="voice-cta-block">
@@ -920,7 +916,7 @@ export default function Home() {
                 Is this real coverage or just a savings plan??
               </summary>
               <div className="faq-a">
-                Real coverage. Every QuietWorld subscription includes a
+                Real coverage. Every Finally Peace subscription includes a
                 licensed coverage plan in your name, issued by a
                 regulated Canadian carrier. The subscription wraps the policy
                 with our service layer — funeral arrangements, repatriation,
@@ -951,7 +947,7 @@ export default function Home() {
               <summary className="faq-q">What if I die outside Canada?</summary>
               <div className="faq-a">
                 Yes. International repatriation is included in your $25
-                subscription. QuietWorld arranges and pays for transport of your
+                subscription. Finally Peace arranges and pays for transport of your
                 body back to your home country, anywhere in the world.
               </div>
             </details>
@@ -973,7 +969,7 @@ export default function Home() {
                 when I sign up?
               </summary>
               <div className="faq-a">
-                QuietWorld requires you to be cognitively healthy at the time you
+                Finally Peace requires you to be cognitively healthy at the time you
                 enroll — this is standard for any final-expense coverage
                 product. The 5-question health quiz at signup includes a brief
                 cognitive screen.
@@ -982,7 +978,7 @@ export default function Home() {
             <details className="faq-item">
               <summary className="faq-q">From what age can I sign up?</summary>
               <div className="faq-a">
-                QuietWorld is available from age 18 to 75. Sign up takes 8
+                Finally Peace is available from age 18 to 75. Sign up takes 8
                 minutes on your phone — no medical exam, just a 5-question health
                 questionnaire.
               </div>
@@ -1007,7 +1003,7 @@ export default function Home() {
                 when you cross into a higher age band years later. A 32-year-old
                 who signs up today will pay the 32-year-old rate at 65. This is
                 the single biggest reason to start now: the carrier locks your
-                mortality risk at today&apos;s number.
+                rate at today&apos;s age — forever.
               </div>
             </details>
           </div>
@@ -1021,10 +1017,10 @@ export default function Home() {
             <div>
               <div className="section-eyebrow">The app</div>
               <h2>
-                Carry QuietWorld <span className="serif">in your pocket.</span>
+                Carry Finally Peace <span className="serif">in your pocket.</span>
               </h2>
               <p className="getapp-sub">
-                Install the QuietWorld app on your phone or desktop in one tap.
+                Install the Finally Peace app on your phone or desktop in one tap.
                 Manage your subscription, store your wishes, and give your family
                 one number to call — all from your home screen.
               </p>
@@ -1043,8 +1039,8 @@ export default function Home() {
             <div className="getapp-visual">
               <div className="phone">
                 <div className="phone-screen">
-                  <div className="phone-logo">QW</div>
-                  <div className="phone-title">QuietWorld</div>
+                  <div className="phone-logo">FP</div>
+                  <div className="phone-title">Finally Peace</div>
                   <div className="phone-tag">For what comes next.</div>
                 </div>
               </div>
@@ -1057,7 +1053,7 @@ export default function Home() {
       <section id="join" className="final-cta">
         <div className="container">
           <h2>
-            Join the QuietWorld <span className="serif">waitlist.</span>
+            Join the Finally Peace <span className="serif">waitlist.</span>
           </h2>
           <p>
             We&apos;re launching in Ontario first. Early members get locked-in
@@ -1085,7 +1081,7 @@ export default function Home() {
       {/* ============ FOOTER ============ */}
       <footer>
         <div className="container">
-          <div>© 2026 QuietWorld Services Inc. · Toronto, Canada</div>
+          <div>© 2026 Finally Peace Services Inc. · Toronto, Canada</div>
           <div className="foot-links">
             <a href="#">Terms</a>
             <a href="#">Privacy</a>

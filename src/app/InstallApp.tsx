@@ -74,7 +74,7 @@ export default function InstallApp() {
       items: [
         "Tap the Share button (the square with an arrow) at the bottom of Safari.",
         "Scroll down and tap “Add to Home Screen”.",
-        "Tap “Add” — the QuietWorld icon appears on your home screen.",
+        "Tap “Add” — the Finally Peace icon appears on your home screen.",
       ],
     },
     android: {
@@ -82,14 +82,14 @@ export default function InstallApp() {
       items: [
         "Tap the ⋮ menu in the top-right of Chrome.",
         "Tap “Install app” (or “Add to Home screen”).",
-        "Confirm — QuietWorld is added to your home screen.",
+        "Confirm — Finally Peace is added to your home screen.",
       ],
     },
     desktop: {
       label: "On desktop (Chrome / Edge)",
       items: [
         "Click the install icon in the address bar (a monitor with a down-arrow).",
-        "Or open the ⋮ menu → “Install QuietWorld…”.",
+        "Or open the ⋮ menu → “Install Finally Peace…”.",
         "Click “Install” — it opens in its own app window.",
       ],
     },
@@ -98,7 +98,7 @@ export default function InstallApp() {
   if (installed) {
     return (
       <div className="install-installed">
-        ✓ QuietWorld is installed on this device.
+        ✓ Finally Peace is installed on this device.
       </div>
     );
   }

@@ -21,7 +21,7 @@ const DEFAULT: AppData = {
   beneficiary: { name: "", relation: "", phone: "" },
 };
 
-const KEY = "quietworld.app.v2";
+const KEY = "finally-peace.app.v1";
 
 function load(): AppData {
   if (typeof window === "undefined") return DEFAULT;
@@ -67,8 +67,8 @@ export default function Dashboard() {
       <header className="dash-header">
         <div className="dash-header-inner">
           <div className="dash-brand">
-            <span className="dash-logo">QW</span>
-            <span className="dash-brand-name">QuietWorld</span>
+            <span className="dash-logo">FP</span>
+            <span className="dash-brand-name">Finally Peace</span>
           </div>
           <a href="/" className="dash-exit" aria-label="Back">✕</a>
         </div>
@@ -364,8 +364,8 @@ function PlanTab({ data, onData }: { data: AppData; onData: (d: AppData) => void
         </div>
         <p>One number for {data.profile.name || "your family"} when it matters most.</p>
         <a href="tel:+18554784569" className="dash-concierge-btn">Call · 1-855-478-4569</a>
-        <a href="mailto:support@quietworld.com" className="dash-concierge-btn dash-concierge-btn-ghost">
-          Email · support@quietworld.com
+        <a href="mailto:FinallyPeacer@gmail.com" className="dash-concierge-btn dash-concierge-btn-ghost">
+          Email · FinallyPeacer@gmail.com
         </a>
       </div>
 

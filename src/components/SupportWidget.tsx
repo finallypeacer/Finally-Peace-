@@ -119,7 +119,7 @@ export default function SupportWidget() {
             <div className="sw-msg sw-msg-assistant">
               <div className="sw-bubble">
                 Hi there! I&apos;m here to help with any questions about
-                QuietWorld or to help you navigate the site.
+                Finally Peace or to help you navigate the site.
               </div>
             </div>
 

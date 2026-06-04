@@ -6,10 +6,10 @@ function cannedReply(q: string): string {
 
   // Greetings — broad match including typos like "heelo", "helo", "sup"
   if (/^(h+e+l+o*|hi+|hey+|sup|yo|good\s*(morning|afternoon|evening)|howdy|hiya|greet|hello)/i.test(t) || t.length < 6)
-    return "Hi! Happy to help. You can ask me anything about QuietWorld — what's covered, how to sign up, pricing, cancellation, or how to install the app. What's on your mind?";
+    return "Hi! Happy to help. You can ask me anything about Finally Peace — what's covered, how to sign up, pricing, cancellation, or how to install the app. What's on your mind?";
 
   if (/price|cost|how much|\$15|15.?month|pricing|cheap|afford|fee/i.test(t))
-    return "QuietWorld is $15/month — one flat price, no hidden fees, no tiers. Your rate is locked at your signup age and never increases, even as you get older.";
+    return "Finally Peace is $15/month — one flat price, no hidden fees, no tiers. Your rate is locked at your signup age and never increases, even as you get older.";
   if (/what.*includ|what.*get|what.*cover|benefit|plan|everything/i.test(t))
     return "Your $15/month subscription covers everything: funeral arrangements (cremation, burial, or aquamation), legal help (will, POA, estate paperwork), debt navigation ($15,000 family runway + specialists), and body transportation anywhere in Canada including international repatriation.";
   if (/cancel|quit|stop|leave|refund/i.test(t))
@@ -19,7 +19,7 @@ function cannedReply(q: string): string {
   if (/sign.?up|join|start|how.*work|enroll|register|begin|get started/i.test(t))
     return "Signing up takes about 8 minutes on your phone — no medical exam, just a 5-question health questionnaire. Tap the Start your subscription button on the plan card, or join the waitlist at the bottom of the page. We're launching in Ontario first.";
   if (/age|old|young|18|75|eligib/i.test(t))
-    return "QuietWorld is available from age 18 to 75. The earlier you join, the lower your locked-in rate — a 30-year-old who signs up today keeps that rate at 65.";
+    return "Finally Peace is available from age 18 to 75. The earlier you join, the lower your locked-in rate — a 30-year-old who signs up today keeps that rate at 65.";
   if (/exam|medical|health question|doctor|test/i.test(t))
     return "No medical exam required — just a quick 5-question health questionnaire at signup. Most people are approved instantly.";
   if (/funeral|cremation|burial|casket|service|ceremony/i.test(t))
@@ -31,24 +31,24 @@ function cannedReply(q: string): string {
   if (/transport|repatri|abroad|travel|body|move|ship/i.test(t))
     return "Body transport is included anywhere in Canada. If you pass abroad, international repatriation is covered. Family travel for 2 distant relatives and pall-bearer arrangement are also included.";
   if (/app|dashboard|download|install|phone|home screen|pwa/i.test(t))
-    return "You can install QuietWorld directly to your home screen — no app store needed. Tap Get the app in the menu and follow the steps. Once installed it opens full-screen like a native app with your personal dashboard.";
+    return "You can install Finally Peace directly to your home screen — no app store needed. Tap Get the app in the menu and follow the steps. Once installed it opens full-screen like a native app with your personal dashboard.";
   if (/real|legit|trust|carrier|underwr|licensed|safe|scam/i.test(t))
-    return "QuietWorld subscriptions are underwritten by a licensed Canadian carrier with full capital reserves and regulatory oversight. We handle the experience; they handle the underwriting.";
+    return "Finally Peace subscriptions are underwritten by a licensed Canadian carrier with full capital reserves and regulatory oversight. We handle the experience; they handle the underwriting.";
   if (/ontario|canada|province|where|location|available|launch/i.test(t))
     return "We're launching in Ontario first, then expanding across Canada. Join the waitlist to get founder pricing and early access.";
   if (/family|spouse|couple|partner|children|parent/i.test(t))
-    return "You can subscribe individually or as a couple — two adults in the same household get 10% off. Your family is notified and connected to a QuietWorld concierge the day they need us.";
+    return "You can subscribe individually or as a couple — two adults in the same household get 10% off. Your family is notified and connected to a Finally Peace concierge the day they need us.";
   if (/concierge|contact|call|phone number|support|help/i.test(t))
-    return "Your family gets one dedicated QuietWorld concierge who handles everything — funeral home, casket, transport, paperwork, even the apartment cleanout. One call, everything handled.";
+    return "Your family gets one dedicated Finally Peace concierge who handles everything — funeral home, casket, transport, paperwork, even the apartment cleanout. One call, everything handled.";
 
   // Warm, helpful fallback — not a dead end
   return "Thanks for reaching out! I can answer questions about our $15/month plan, what's covered, how to sign up, cancellation, and more. Could you tell me a bit more about what you'd like to know?";
 }
 
-const SYSTEM_PROMPT = `You are the QuietWorld Support assistant. You help visitors understand the QuietWorld subscription, navigate the website, and answer questions.
+const SYSTEM_PROMPT = `You are the Finally Peace Support assistant. You help visitors understand the Finally Peace subscription, navigate the website, and answer questions.
 
-About QuietWorld:
-- QuietWorld is a $15/month subscription that covers end-of-life needs for Canadians
+About Finally Peace:
+- Finally Peace is a $15/month subscription that covers end-of-life needs for Canadians
 - One flat price — no tiers, no hidden fees, no medical exam required
 - Launching in Ontario first; currently accepting a Canadian waitlist
 - Rate is locked at signup age and never increases
@@ -71,9 +71,9 @@ Website navigation:
 - "What you get" section — the 4 main benefits (funeral, legal, debt, transport)
 - "The plan" section — the $15/month plan card with full feature list
 - "How it works" — 3-step signup process
-- "Why QuietWorld" — what makes it different
+- "Why Finally Peace" — what makes it different
 - "FAQ" — common questions answered
-- "Get the app" — install the QuietWorld PWA to your home screen
+- "Get the app" — install the Finally Peace PWA to your home screen
 - "/app" — the member dashboard (track health habits, view coverage, contact concierge)
 - The "Join the waitlist" form at the bottom of the page
 

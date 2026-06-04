@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
 // POST /api/checkout
-// Creates a Stripe Checkout session for the single QuietWorld $25/mo
+// Creates a Stripe Checkout session for the single Finally Peace $25/mo
 // subscription and returns the hosted-checkout URL for the client to redirect to.
 //
 // Required environment variables (set in .env.local and in Vercel):
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
                 recurring: { interval: "month" },
                 unit_amount: 2500, // $25.00 CAD
                 product_data: {
-                  name: "QuietWorld Subscription",
+                  name: "Finally Peace Subscription",
                   description:
                     "End-of-life coverage subscription — funeral, legal, debt, and transportation, all included.",
                 },
