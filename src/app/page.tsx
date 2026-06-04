@@ -705,16 +705,14 @@ export default function Home() {
               <div className="step-num">2</div>
               <h3>Quick quiz</h3>
               <p>
-                5 health questions. No medical exam. Simplified-issue
-                underwriting handled by our licensed Canadian carrier partner.
+                5 health questions. No medical exam. Simply covered.
               </p>
             </div>
             <div className="step">
               <div className="step-num">3</div>
-              <h3>Ready for life — your future is secured</h3>
+              <h3>Your future is secured</h3>
               <p>
-                Real coverage, issued and active. We&apos;re here the day
-                your family needs us. Until then — live your life.
+                We&apos;re here when needed. Until then — live your life.
               </p>
             </div>
           </div>
