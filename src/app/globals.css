@@ -1650,3 +1650,15 @@ body { font-family: var(--qw-sans) !important; }
 }
 .fc-delta { font-size: 12px; font-weight: 700; color: #dc2626; }
 .fc-source { font-size: 10.5px; color: var(--slate-500); font-style: italic; }
+
+/* ============ STATS CHARTS ROW (two-column) ============ */
+.stats-charts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+.af-delta { color: #dc2626; }
+@media (max-width: 720px) {
+  .stats-charts-row { grid-template-columns: 1fr; }
+}

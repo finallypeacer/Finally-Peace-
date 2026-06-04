@@ -276,3 +276,127 @@ export function FuneralCostChart() {
     </div>
   );
 }
+
+/* ------------------------------------------------------------------ *
+ * Affordability chart — % of Canadians who struggled / couldn't pay
+ * for a funeral without financial hardship. Bar chart by year.
+ * ------------------------------------------------------------------ */
+const AFFORD_DATA = [
+  { year: "2017", pct: 38 },
+  { year: "2018", pct: 41 },
+  { year: "2019", pct: 44 },
+  { year: "2020", pct: 49 },
+  { year: "2021", pct: 53 },
+  { year: "2022", pct: 59 },
+  { year: "2023", pct: 64 },
+  { year: "2024", pct: 71 },
+];
+
+export function AffordabilityChart() {
+  const [progress, setProgress] = useState(0);
+  const [hovered, setHovered] = useState<number | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const animated = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !animated.current) {
+          animated.current = true;
+          const start = performance.now();
+          const dur = 1200;
+          function tick(now: number) {
+            const t = Math.min(1, (now - start) / dur);
+            const eased = 1 - Math.pow(1 - t, 2.5);
+            setProgress(eased);
+            if (t < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        }
+      },
+      { threshold: 0.3 },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  const AW = 320;
+  const AH = 110;
+  const APAD = { top: 12, right: 16, bottom: 28, left: 36 };
+  const barW = (AW - APAD.left - APAD.right) / AFFORD_DATA.length;
+  const barGap = barW * 0.22;
+  const chartH = AH - APAD.top - APAD.bottom;
+  const maxPct = 80;
+
+  return (
+    <div ref={ref} className="fc-wrap">
+      <div className="fc-head">
+        <span className="fc-title">Canadians facing funeral hardship</span>
+        <span className="fc-sub">% who struggled to pay</span>
+      </div>
+      <svg viewBox={`0 0 ${AW} ${AH}`} className="fc-svg"
+        onMouseLeave={() => setHovered(null)}>
+        <defs>
+          <linearGradient id="afGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#dc2626" stopOpacity="0.85" />
+            <stop offset="100%" stopColor="#f87171" stopOpacity="0.55" />
+          </linearGradient>
+          <linearGradient id="afGradHov" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#b91c1c" stopOpacity="1" />
+            <stop offset="100%" stopColor="#dc2626" stopOpacity="0.8" />
+          </linearGradient>
+        </defs>
+
+        {/* Y gridlines at 25%, 50%, 75% */}
+        {[25, 50, 75].map((v) => {
+          const y = APAD.top + chartH - (v / maxPct) * chartH;
+          return (
+            <g key={v}>
+              <line x1={APAD.left} y1={y} x2={AW - APAD.right} y2={y}
+                stroke="#e2e8f0" strokeWidth="1" />
+              <text x={APAD.left - 4} y={y + 3.5} textAnchor="end"
+                fontSize="8" fill="#94a3b8">{v}%</text>
+            </g>
+          );
+        })}
+
+        {/* Bars */}
+        {AFFORD_DATA.map((d, i) => {
+          const barH = (d.pct / maxPct) * chartH * progress;
+          const x = APAD.left + i * barW + barGap / 2;
+          const w = barW - barGap;
+          const y = APAD.top + chartH - barH;
+          const isHov = hovered === i;
+          return (
+            <g key={i}
+              onMouseEnter={() => setHovered(i)}
+              onMouseLeave={() => setHovered(null)}
+              style={{ cursor: "pointer" }}>
+              <rect x={x} y={y} width={w} height={Math.max(0, barH)}
+                rx="3" fill={isHov ? "url(#afGradHov)" : "url(#afGrad)"}
+                style={{ transition: "fill 0.15s" }} />
+              {/* Tooltip */}
+              {isHov && (
+                <g>
+                  <rect x={x + w / 2 - 16} y={y - 20} width={32} height={16}
+                    rx="4" fill="#0a1837" />
+                  <text x={x + w / 2} y={y - 9} textAnchor="middle"
+                    fontSize="8.5" fill="#fff" fontWeight="700">{d.pct}%</text>
+                </g>
+              )}
+              {/* Year label */}
+              <text x={x + w / 2} y={AH - 6} textAnchor="middle"
+                fontSize="8" fill="#94a3b8">{d.year}</text>
+            </g>
+          );
+        })}
+      </svg>
+      <div className="fc-footer">
+        <span className="fc-delta af-delta">↑ 71% in 2024</span>
+        <span className="fc-source">Source: Statistics Canada / FSAC</span>
+      </div>
+    </div>
+  );
+}

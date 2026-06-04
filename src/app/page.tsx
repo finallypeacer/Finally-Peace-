@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import InstallApp from "./InstallApp";
-import { WaitlistCounter, FuneralCostChart } from "@/components/LiveStats";
+import { WaitlistCounter, FuneralCostChart, AffordabilityChart } from "@/components/LiveStats";
 
 // The dotLottie player is a custom element registered by the script loaded in
 // layout.tsx. Declare it so TSX/JSX accepts <dotlottie-wc>.
@@ -256,8 +256,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div style={{ marginTop: "40px", maxWidth: "480px" }}>
+          <div className="stats-charts-row">
             <FuneralCostChart />
+            <AffordabilityChart />
           </div>
         </div>
       </section>
