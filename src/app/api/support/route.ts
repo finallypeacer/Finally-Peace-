@@ -1,6 +1,40 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
 
+function cannedReply(q: string): string {
+  if (/price|cost|how much|\$15|15.?month|pricing/i.test(q))
+    return "QuietWorld is $15/month — one flat price, no hidden fees, no tiers. Your rate is locked at your signup age and never increases, even as you get older.";
+  if (/what.*includ|what.*get|cover|benefit|plan/i.test(q))
+    return "Your $15/month subscription covers everything: funeral arrangements (cremation, burial, or aquamation), legal help (will, POA, estate paperwork), debt navigation ($15,000 family runway + specialists), and body transportation anywhere in Canada including international repatriation.";
+  if (/cancel|quit|stop|leave/i.test(q))
+    return "There's a 12-month minimum commitment, then you can cancel anytime. Your coverage simply lapses if you stop paying — no penalties.";
+  if (/wait|period|when.*cover|24 month|day 1/i.test(q))
+    return "Accidental death is covered from day 1. For natural causes, full benefits pay out after 24 months of premiums — that's standard for simplified-issue products. During the first 24 months your family receives a pro-rated payout.";
+  if (/sign.?up|join|start|how.*work|enroll|register/i.test(q))
+    return "Signing up takes about 8 minutes on your phone — no medical exam, just a 5-question health questionnaire. Tap the Start your subscription button on the plan card, or join the waitlist at the bottom of the page. We're launching in Ontario first.";
+  if (/age|old|young|18|75/i.test(q))
+    return "QuietWorld is available from age 18 to 75. The earlier you join, the lower your locked-in rate — a 30-year-old who signs up today keeps that rate at 65.";
+  if (/exam|medical|health|doctor/i.test(q))
+    return "No medical exam required — just a quick 5-question health questionnaire at signup. Most people are approved instantly.";
+  if (/funeral|cremation|burial|casket|service/i.test(q))
+    return "Your subscription covers the full funeral: cremation, traditional burial, green burial, or aquamation — your choice. Casket or urn, live-streamed memorial, obituary in 2 publications, and 10 certified death certificates are all included.";
+  if (/legal|will|poa|estate|power of attorney/i.test(q))
+    return "Legal help is fully included: an attorney-prepared will, power of attorney, advance directive, estate paperwork & probate guidance, digital legacy management, and family beneficiary setup.";
+  if (/debt|money|cash|benefit|family runway/i.test(q))
+    return "The debt navigation benefit connects your family to specialists who restructure and negotiate outstanding obligations — plus a $15,000 cash benefit for family runway and apartment/room cleanout coordination.";
+  if (/transport|repatri|abroad|travel|body/i.test(q))
+    return "Body transport is included anywhere in Canada. If you pass abroad, international repatriation is covered. Family travel for 2 distant relatives and pall-bearer arrangement are also included.";
+  if (/app|dashboard|download|install|phone/i.test(q))
+    return "You can install QuietWorld directly to your home screen — no app store needed. Tap the Get the app button in the menu and follow the steps. Once installed, it opens full-screen like a native app with your personal dashboard.";
+  if (/real|legit|trust|carrier|underwr/i.test(q))
+    return "QuietWorld subscriptions are underwritten by a licensed Canadian carrier with full capital reserves and regulatory oversight. We handle the experience; they handle the underwriting.";
+  if (/ontario|canada|province|where/i.test(q))
+    return "We're launching in Ontario first, then expanding across Canada. Join the waitlist to get founder pricing and early access.";
+  if (/hello|hi|hey|help|support/i.test(q))
+    return "Hi there! I'm here to help with any questions about QuietWorld. Ask me about what's covered, how to sign up, pricing, or anything else — or scroll up to read the FAQ.";
+  return "Great question! For the most accurate answer, I'd suggest checking our FAQ section on this page, or join the waitlist at the bottom and our team will reach out personally. Is there anything else I can help with?";
+}
+
 const SYSTEM_PROMPT = `You are the QuietWorld Support assistant. You help visitors understand the QuietWorld subscription, navigate the website, and answer questions.
 
 About QuietWorld:
@@ -45,11 +79,34 @@ Guidelines:
 export async function POST(request: Request) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
 
+  // No API key — fall back to smart canned answers so demo works out of the box
   if (!apiKey) {
-    return NextResponse.json(
-      { error: "Support is not configured yet. Please check back soon." },
-      { status: 503 },
-    );
+    let messages: { role: "user" | "assistant"; content: string }[];
+    try {
+      const body = await request.json();
+      messages = body.messages;
+      if (!Array.isArray(messages) || messages.length === 0) throw new Error();
+    } catch {
+      return NextResponse.json({ error: "Invalid request." }, { status: 400 });
+    }
+    const lastUser = messages.filter((m) => m.role === "user").pop()?.content?.toLowerCase() ?? "";
+    const reply = cannedReply(lastUser);
+    const encoder = new TextEncoder();
+    // Simulate a slight streaming delay for realism
+    const stream = new ReadableStream({
+      async start(controller) {
+        // drip the reply word-by-word so it feels live
+        const words = reply.split(" ");
+        for (const word of words) {
+          controller.enqueue(encoder.encode(word + " "));
+          await new Promise((r) => setTimeout(r, 28));
+        }
+        controller.close();
+      },
+    });
+    return new Response(stream, {
+      headers: { "Content-Type": "text/plain; charset=utf-8" },
+    });
   }
 
   let messages: { role: "user" | "assistant"; content: string }[];

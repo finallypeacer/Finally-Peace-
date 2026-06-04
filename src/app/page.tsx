@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import InstallApp from "./InstallApp";
+import { WaitlistCounter, FuneralCostChart } from "@/components/LiveStats";
 
 // The dotLottie player is a custom element registered by the script loaded in
 // layout.tsx. Declare it so TSX/JSX accepts <dotlottie-wc>.
@@ -254,6 +255,9 @@ export default function Home() {
                 Canadian funeral industry, every year
               </div>
             </div>
+          </div>
+          <div style={{ marginTop: "40px", maxWidth: "480px" }}>
+            <FuneralCostChart />
           </div>
         </div>
       </section>
@@ -863,7 +867,7 @@ export default function Home() {
                   Join the waitlist →
                 </a>
                 <div className="voice-cta-meta">
-                  2,300+ Canadians on the list
+                  <WaitlistCounter />
                 </div>
               </div>
             </div>
@@ -1041,9 +1045,10 @@ export default function Home() {
               {joined ? "✓ You're on the list" : "Join the waitlist"}
             </button>
           </form>
-          <div className="cta-trust">
+          <div className="cta-trust" style={{ marginBottom: "16px" }}>
             No spam. We email you twice — once when we launch, once if you ask.
           </div>
+          <WaitlistCounter />
         </div>
       </section>
 
