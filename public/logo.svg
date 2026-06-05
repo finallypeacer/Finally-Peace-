@@ -1,53 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 52">
   <defs>
     <linearGradient id="inf" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9333ea"/>
-      <stop offset="50%" stop-color="#7c3aed"/>
-      <stop offset="100%" stop-color="#6d28d9"/>
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
     </linearGradient>
-    <linearGradient id="feather" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#93c5fd"/>
-      <stop offset="50%" stop-color="#6366f1"/>
-      <stop offset="100%" stop-color="#4338ca"/>
+    <linearGradient id="fth" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
     </linearGradient>
   </defs>
 
-  <!-- Infinity symbol (two overlapping ellipses) -->
-  <g transform="translate(148,95)">
-    <ellipse cx="-55" cy="0" rx="52" ry="38" fill="none" stroke="url(#inf)" stroke-width="18" stroke-linecap="round"/>
-    <ellipse cx="55" cy="0" rx="52" ry="38" fill="none" stroke="url(#inf)" stroke-width="18" stroke-linecap="round"/>
+  <!-- Infinity symbol -->
+  <g transform="translate(42,26)">
+    <ellipse cx="-18" cy="0" rx="17" ry="13" fill="none" stroke="url(#inf)" stroke-width="5.5" stroke-linecap="round"/>
+    <ellipse cx="18"  cy="0" rx="17" ry="13" fill="none" stroke="url(#inf)" stroke-width="5.5" stroke-linecap="round"/>
   </g>
 
-  <!-- Feather overlaid (rotated, centered on infinity) -->
-  <g transform="translate(148,52) rotate(-38, 0, 43)">
-    <!-- Shaft -->
-    <line x1="0" y1="0" x2="0" y2="86" stroke="url(#feather)" stroke-width="3.5" stroke-linecap="round"/>
-    <!-- Left barbs -->
-    <path d="M0,8  Q-20,16 -26,28"  fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
-    <path d="M0,22 Q-22,30 -27,44"  fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
-    <path d="M0,36 Q-22,44 -25,58"  fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
-    <path d="M0,50 Q-18,57 -19,70"  fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
-    <!-- Right barbs -->
-    <path d="M0,8  Q20,16 26,28"   fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
-    <path d="M0,22 Q22,30 27,44"   fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
-    <path d="M0,36 Q22,44 25,58"   fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
-    <path d="M0,50 Q18,57 19,70"   fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
-    <!-- Tip -->
-    <path d="M0,0 Q3,8 0,16 Q-3,8 0,0" fill="#93c5fd" opacity="0.95"/>
+  <!-- Feather through the infinity -->
+  <g transform="translate(42,5) rotate(-36, 0, 21)">
+    <line x1="0" y1="0" x2="0" y2="42" stroke="url(#fth)" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M0,4  Q-9,9  -12,16"  fill="none" stroke="url(#fth)" stroke-width="1.4" stroke-linecap="round" opacity="0.9"/>
+    <path d="M0,13 Q-10,18 -13,26" fill="none" stroke="url(#fth)" stroke-width="1.4" stroke-linecap="round" opacity="0.8"/>
+    <path d="M0,22 Q-9,27  -11,34" fill="none" stroke="url(#fth)" stroke-width="1.4" stroke-linecap="round" opacity="0.65"/>
+    <path d="M0,4  Q9,9  12,16"    fill="none" stroke="url(#fth)" stroke-width="1.4" stroke-linecap="round" opacity="0.9"/>
+    <path d="M0,13 Q10,18 13,26"   fill="none" stroke="url(#fth)" stroke-width="1.4" stroke-linecap="round" opacity="0.8"/>
+    <path d="M0,22 Q9,27  11,34"   fill="none" stroke="url(#fth)" stroke-width="1.4" stroke-linecap="round" opacity="0.65"/>
+    <path d="M0,0 Q1.5,4 0,8 Q-1.5,4 0,0" fill="#60a5fa"/>
   </g>
 
   <!-- Sparkles -->
-  <g fill="#a78bfa">
-    <path d="M64,42  l3,7  l3,-7  l-3,-7  Z" opacity="0.8"/>
-    <path d="M78,36  l2,4  l2,-4  l-2,-4  Z" opacity="0.7"/>
-    <path d="M220,42 l3,7  l3,-7  l-3,-7  Z" opacity="0.8"/>
-    <path d="M234,36 l2,4  l2,-4  l-2,-4  Z" opacity="0.7"/>
-    <path d="M148,28 l2.5,6 l2.5,-6 l-2.5,-6 Z" opacity="0.9"/>
-    <path d="M100,68 l1.5,3.5 l1.5,-3.5 l-1.5,-3.5 Z" opacity="0.5"/>
-    <path d="M196,68 l1.5,3.5 l1.5,-3.5 l-1.5,-3.5 Z" opacity="0.5"/>
+  <g fill="#3b82f6" opacity="0.7">
+    <path d="M14,10 l2,4 l2,-4 l-2,-4 Z"/>
+    <path d="M20,7  l1,2.5 l1,-2.5 l-1,-2.5 Z" opacity="0.6"/>
+    <path d="M72,10 l2,4 l2,-4 l-2,-4 Z"/>
+    <path d="M78,7  l1,2.5 l1,-2.5 l-1,-2.5 Z" opacity="0.6"/>
+    <path d="M42,4  l1.5,3.5 l1.5,-3.5 l-1.5,-3.5 Z"/>
   </g>
 
   <!-- "Finally Peace" text -->
-  <text x="310" y="82" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#0f172a" letter-spacing="-1">Finally Peace</text>
-  <text x="312" y="115" font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#7c3aed" font-style="italic" letter-spacing="0.5">Infinite care. Infinite peace.</text>
+  <text x="96" y="34" font-family="'Instrument Serif', Georgia, serif" font-style="italic" font-size="28" font-weight="700" fill="#0f172a" letter-spacing="-0.5">Finally Peace</text>
 </svg>
