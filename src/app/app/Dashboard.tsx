@@ -299,7 +299,7 @@ function PlanTab({ data, onData }: { data: AppData; onData: (d: AppData) => void
     { key: "funeral",   label: "Funeral — your way",  note: "Cremation, burial, service, paperwork" },
     { key: "legal",     label: "Legal help",           note: "Will, POA, estate paperwork" },
     { key: "debt",      label: "Debt navigation",      note: "$15,000 family runway + specialists" },
-    { key: "transport", label: "Transportation",       note: "Anywhere in Canada + repatriation" },
+    { key: "transport", label: "Transportation",       note: "Worldwide + international repatriation" },
   ];
   const CovIco: Record<string, React.ReactNode> = {
     funeral: <IcoBurial />, legal: <IcoDoc />, debt: <IcoDebt />, transport: <IcoTransport />,

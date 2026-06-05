@@ -128,7 +128,7 @@ export function WaitlistCounter() {
         <span className="wl-dot" />
         <span className="wl-num">{displayed.toLocaleString()}+</span>
       </div>
-      <span className="wl-label">Canadians already on the waitlist</span>
+      <span className="wl-label">people already on the waitlist</span>
       <span className="wl-urgency">+ Spots filling fast — lock your rate now</span>
     </div>
   );
@@ -181,7 +181,7 @@ export function FuneralCostChart() {
   return (
     <div ref={ref} className="fc-wrap">
       <div className="fc-head">
-        <span className="fc-title">Average Canadian funeral cost</span>
+        <span className="fc-title">Average funeral cost</span>
         <span className="fc-sub">rising year over year</span>
       </div>
       <svg
@@ -274,7 +274,7 @@ export function FuneralCostChart() {
       </svg>
       <div className="fc-footer">
         <span className="fc-delta">↑ +95% since 2015</span>
-        <span className="fc-source">Source: Funeral Service Assoc. of Canada</span>
+        <span className="fc-source">Source: Funeral Service Research</span>
       </div>
     </div>
   );
@@ -336,7 +336,7 @@ export function AffordabilityChart() {
   return (
     <div ref={ref} className="fc-wrap">
       <div className="fc-head">
-        <span className="fc-title">Canadians facing funeral hardship</span>
+        <span className="fc-title">People facing funeral hardship</span>
         <span className="fc-sub">% who struggled to pay</span>
       </div>
       <svg viewBox={`0 0 ${AW} ${AH}`} className="fc-svg"
@@ -398,7 +398,7 @@ export function AffordabilityChart() {
       </svg>
       <div className="fc-footer">
         <span className="fc-delta af-delta">↑ 71% in 2024</span>
-        <span className="fc-source">Source: Statistics Canada / FSAC</span>
+        <span className="fc-source">Source: Global Funeral Research</span>
       </div>
     </div>
   );

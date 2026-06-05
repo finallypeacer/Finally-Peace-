@@ -154,7 +154,7 @@ export default function Home() {
           <div className="hero-grid">
             <div>
               <div className="hero-pill">
-                New · Now accepting Canadian waitlist
+                New · Now accepting members worldwide
               </div>
               <h1>
                 $15 a month. <br />
@@ -177,7 +177,7 @@ export default function Home() {
               <div className="hero-trust">
                 <span>
                   <span className="check">✓</span>&nbsp; Underwritten by a
-                  licensed Canadian carrier
+                  world-class licensed carrier
                 </span>
                 <span>
                   <span className="check">✓</span>&nbsp; Cancel anytime after 12
@@ -206,17 +206,16 @@ export default function Home() {
       <section className="trust-strip">
         <div className="container">
           <div className="trust-label">
-            <span className="dot"></span>Partnered with leading Canadian
-            carriers<span className="dot"></span>
+            <span className="dot"></span>Partnered with world-class carriers<span className="dot"></span>
           </div>
           <div className="trust-logos">
             <div className="trust-logo">
-              <div className="trust-logo-name">Underwriting partner</div>
-              <div className="trust-logo-tag">Tier 1 Canadian life carrier</div>
+              <div className="trust-logo-name">Complete Coverage</div>
+              <div className="trust-logo-tag">Tier 1 licensed life carrier</div>
             </div>
             <div className="trust-logo">
               <div className="trust-logo-name">Funeral network</div>
-              <div className="trust-logo-tag">100+ Canadian providers</div>
+              <div className="trust-logo-tag">100+ trusted providers</div>
             </div>
             <div className="trust-logo">
               <div className="trust-logo-name">Legal partner</div>
@@ -224,7 +223,7 @@ export default function Home() {
             </div>
           </div>
           <div className="trust-disclaimer">
-            All policies are issued by a licensed Canadian carrier.
+            All policies are issued by a licensed, reputable carrier.
             Concierge and debt-restructuring services are delivered through
             Finally Peace&apos;s vetted partner network.
           </div>
@@ -237,7 +236,7 @@ export default function Home() {
           <div className="stats-grid">
             <div className="stat-item">
               <div className="stat-num">$15K</div>
-              <div className="stat-label">average Canadian funeral cost</div>
+              <div className="stat-label">average funeral cost</div>
             </div>
             <div className="stat-item">
               <div className="stat-num">7&nbsp;days</div>
@@ -248,13 +247,13 @@ export default function Home() {
             <div className="stat-item">
               <div className="stat-num">73%</div>
               <div className="stat-label">
-                of Canadians under 50 have no plan
+                of people under 50 have no plan
               </div>
             </div>
             <div className="stat-item">
               <div className="stat-num">$2B</div>
               <div className="stat-label">
-                Canadian funeral industry, every year
+                funeral industry, every year
               </div>
             </div>
           </div>
@@ -309,7 +308,7 @@ export default function Home() {
             <div className="problem-card">
               <h3>Younger generations avoid the conversation entirely.</h3>
               <p>
-                73% of Canadians under 50 have no plan. Not because they
+                73% of people under 50 have no plan. Not because they
                 don&apos;t care. Because no one made it easy enough to start.
               </p>
             </div>
@@ -423,7 +422,7 @@ export default function Home() {
               </svg>
               <h3>Transportation</h3>
               <p>
-                Body transport anywhere in Canada. International repatriation if
+                Body transport worldwide. International repatriation if
                 you pass abroad. Family travel covered for distant relatives who
                 need to be there.
               </p>
@@ -537,7 +536,7 @@ export default function Home() {
                 <div className="single-plan-col">
                   <div className="single-plan-col-title">TRANSPORT</div>
                   <ul className="single-plan-list">
-                    <li>Body transport anywhere in Canada</li>
+                    <li>Body transport worldwide</li>
                     <li>International repatriation if you die abroad</li>
                     <li>Family travel for 2 distant relatives</li>
                     <li>Pall-bearer arrangement</li>
@@ -738,7 +737,7 @@ export default function Home() {
               <div className="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
               <h3>Backed by a real carrier</h3>
               <p>
-                Your policy is underwritten by a licensed Canadian life
+                Your policy is underwritten by a world-class licensed
                 carrier. Capital reserves, regulator oversight, the
                 works. We handle the experience; they handle the underwriting.
               </p>
@@ -918,7 +917,7 @@ export default function Home() {
               <div className="faq-a">
                 Real coverage. Every Finally Peace subscription includes a
                 licensed coverage plan in your name, issued by a
-                regulated Canadian carrier. The subscription wraps the policy
+                reputable licensed carrier. The subscription wraps the policy
                 with our service layer — funeral arrangements, repatriation,
                 concierge, AI memorial — but the underlying product is regulated
                 final-expense coverage.
@@ -944,7 +943,7 @@ export default function Home() {
               </div>
             </details>
             <details className="faq-item">
-              <summary className="faq-q">What if I die outside Canada?</summary>
+              <summary className="faq-q">What if I die abroad?</summary>
               <div className="faq-a">
                 Yes. International repatriation is included in your $25
                 subscription. Finally Peace arranges and pays for transport of your
@@ -1056,7 +1055,7 @@ export default function Home() {
             Join the Finally Peace <span className="serif">waitlist.</span>
           </h2>
           <p>
-            We&apos;re launching in Ontario first. Early members get locked-in
+            We&apos;re launching soon. Early members get locked-in
             founder pricing and influence the product before launch.
           </p>
           <form className="signup-form" onSubmit={handleWaitlist}>
@@ -1081,7 +1080,7 @@ export default function Home() {
       {/* ============ FOOTER ============ */}
       <footer>
         <div className="container">
-          <div>© 2026 Finally Peace Services Inc. · Toronto, Canada</div>
+          <div>© 2026 Finally Peace Services Inc. · Global</div>
           <div className="foot-links">
             <a href="#">Terms</a>
             <a href="#">Privacy</a>

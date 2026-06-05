@@ -11,13 +11,13 @@ function cannedReply(q: string): string {
   if (/price|cost|how much|\$15|15.?month|pricing|cheap|afford|fee/i.test(t))
     return "Finally Peace is $15/month — one flat price, no hidden fees, no tiers. Your rate is locked at your signup age and never increases, even as you get older.";
   if (/what.*includ|what.*get|what.*cover|benefit|plan|everything/i.test(t))
-    return "Your $15/month subscription covers everything: funeral arrangements (cremation, burial, or aquamation), legal help (will, POA, estate paperwork), debt navigation ($15,000 family runway + specialists), and body transportation anywhere in Canada including international repatriation.";
+    return "Your $15/month subscription covers everything: funeral arrangements (cremation, burial, or aquamation), legal help (will, POA, estate paperwork), debt navigation ($15,000 family runway + specialists), and body transportation worldwide including international repatriation.";
   if (/cancel|quit|stop|leave|refund/i.test(t))
     return "There's a 12-month minimum commitment, then you can cancel anytime. Your coverage simply lapses if you stop paying — no penalties.";
   if (/wait|period|when.*cover|24 month|day 1|immediate|instant/i.test(t))
     return "Accidental death is covered from day 1. For natural causes, full benefits pay out after 24 months of premiums. During the first 24 months your family receives a pro-rated payout.";
   if (/sign.?up|join|start|how.*work|enroll|register|begin|get started/i.test(t))
-    return "Signing up takes about 8 minutes on your phone — no medical exam, just a 5-question health questionnaire. Tap the Start your subscription button on the plan card, or join the waitlist at the bottom of the page. We're launching in Ontario first.";
+    return "Signing up takes about 8 minutes on your phone — no medical exam, just a 5-question health questionnaire. Tap the Start your subscription button on the plan card, or join the waitlist at the bottom of the page. We're launching soon.";
   if (/age|old|young|18|75|eligib/i.test(t))
     return "Finally Peace is available from age 18 to 75. The earlier you join, the lower your locked-in rate — a 30-year-old who signs up today keeps that rate at 65.";
   if (/exam|medical|health question|doctor|test/i.test(t))
@@ -29,13 +29,13 @@ function cannedReply(q: string): string {
   if (/debt|money|cash|benefit|family runway|creditor|loan/i.test(t))
     return "The debt navigation benefit connects your family to specialists who restructure and negotiate outstanding obligations — plus a $15,000 cash benefit for family runway and apartment/room cleanout coordination.";
   if (/transport|repatri|abroad|travel|body|move|ship/i.test(t))
-    return "Body transport is included anywhere in Canada. If you pass abroad, international repatriation is covered. Family travel for 2 distant relatives and pall-bearer arrangement are also included.";
+    return "Body transport is included worldwide. If you pass abroad, international repatriation is covered. Family travel for 2 distant relatives and pall-bearer arrangement are also included.";
   if (/app|dashboard|download|install|phone|home screen|pwa/i.test(t))
     return "You can install Finally Peace directly to your home screen — no app store needed. Tap Get the app in the menu and follow the steps. Once installed it opens full-screen like a native app with your personal dashboard.";
   if (/real|legit|trust|carrier|underwr|licensed|safe|scam/i.test(t))
-    return "Finally Peace subscriptions are underwritten by a licensed Canadian carrier with full capital reserves and regulatory oversight. We handle the experience; they handle the underwriting.";
+    return "Finally Peace subscriptions are underwritten by a world-class licensed carrier with full capital reserves and regulatory oversight. We handle the experience; they handle the underwriting.";
   if (/ontario|canada|province|where|location|available|launch/i.test(t))
-    return "We're launching in Ontario first, then expanding across Canada. Join the waitlist to get founder pricing and early access.";
+    return "We're launching soon, then expanding globally. Join the waitlist to get founder pricing and early access.";
   if (/family|spouse|couple|partner|children|parent/i.test(t))
     return "You can subscribe individually or as a couple — two adults in the same household get 10% off. Your family is notified and connected to a Finally Peace concierge the day they need us.";
   if (/concierge|contact|call|phone number|support|help/i.test(t))
@@ -48,16 +48,16 @@ function cannedReply(q: string): string {
 const SYSTEM_PROMPT = `You are the Finally Peace Support assistant. You help visitors understand the Finally Peace subscription, navigate the website, and answer questions.
 
 About Finally Peace:
-- Finally Peace is a $15/month subscription that covers end-of-life needs for Canadians
+- Finally Peace is a $15/month subscription that covers end-of-life end-of-life needs globally
 - One flat price — no tiers, no hidden fees, no medical exam required
-- Launching in Ontario first; currently accepting a Canadian waitlist
+- Launching in Ontario first; currently accepting members worldwide
 - Rate is locked at signup age and never increases
 
 What's included in the $15/month subscription:
 FUNERAL: Choice of cremation, traditional burial, green burial, or aquamation. Casket or urn (3 styles per type). Full service OR direct cremation. Live-streamed memorial. Obituary in 2 publications. 10 certified death certificates.
 LEGAL: Attorney-prepared will. Power of attorney + advance directive. Estate paperwork & probate guidance. Digital legacy management. Family beneficiary setup.
 DEBT: Connection to debt restructuring specialists. Negotiation & reorganization support. Guidance through outstanding obligations. $15,000 cash benefit for family runway. Apartment/room cleanout coordination.
-TRANSPORT: Body transport anywhere in Canada. International repatriation if you die abroad. Family travel for 2 distant relatives. Pall-bearer arrangement. Burial plot or scattering location coordination.
+TRANSPORT: Body transport worldwide. International repatriation if you die abroad. Family travel for 2 distant relatives. Pall-bearer arrangement. Burial plot or scattering location coordination.
 
 Key facts:
 - No medical exam required — just a 5-question health questionnaire
