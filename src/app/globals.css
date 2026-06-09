@@ -1529,19 +1529,24 @@ body { font-family: var(--qw-sans) !important; }
 
 /* ============ SUPPORT WIDGET ============ */
 .sw-fab-wrap {
-  position: fixed; bottom: 28px; right: 24px; z-index: 999;
-  display: flex; align-items: center; gap: 6px;
+  position: fixed !important;
+  bottom: 28px !important;
+  right: 24px !important;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 .sw-fab {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 14px 20px; border-radius: 999px; border: none; cursor: pointer;
-  background: rgba(10,24,55,0.72); color: #fff;
-  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  background: rgba(10,24,55,0.45); color: #fff;
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   font-family: inherit; font-weight: 700; font-size: 14px;
   box-shadow: 0 8px 24px rgba(10,24,55,0.28);
   transition: all 0.2s;
 }
-.sw-fab:hover { background: rgba(37,99,235,0.85); transform: translateY(-2px); }
+.sw-fab:hover { background: rgba(37,99,235,0.75); transform: translateY(-2px); }
 .sw-dismiss {
   width: 22px; height: 22px; border-radius: 50%;
   background: rgba(100,116,139,0.5); border: none;
@@ -1665,7 +1670,7 @@ body { font-family: var(--qw-sans) !important; }
 
 /* Keep widget above dashboard bottom nav on /app */
 @media (max-width: 600px) {
-  .sw-fab-wrap { bottom: 20px; right: 16px; }
+  .sw-fab-wrap { bottom: 20px !important; right: 16px !important; }
   .sw-fab { padding: 12px 16px; font-size: 13px; }
   .sw-panel {
     bottom: 152px;
@@ -1950,7 +1955,7 @@ body { font-family: var(--qw-sans) !important; }
   .rel-planet-globe { width: 140px; height: 140px; }
 
   /* Support widget — ensure it clears the bottom on very small phones */
-  .sw-fab-wrap { bottom: 16px; right: 10px; }
+  .sw-fab-wrap { bottom: 16px !important; right: 16px !important; }
   .sw-fab { padding: 12px 16px; font-size: 13px; }
 
   /* getapp section phone mockup */
