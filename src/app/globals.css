@@ -1515,9 +1515,9 @@ body { font-family: var(--qw-sans) !important; }
   font-size: 15px !important; padding: 14px !important;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .nav-burger { display: flex; }
-  .nav-links { display: none; }
+  .nav-links { display: none !important; }
 }
 
 .getapp-open-link {
@@ -1870,9 +1870,6 @@ body { font-family: var(--qw-sans) !important; }
     box-shadow: 0 4px 16px rgba(37,99,235,0.35);
   }
 
-  /* Nav: only show Join button, float Open the app to bottom-right */
-  .nav-links { gap: 8px; }
-  .btn-primary { padding: 10px 14px !important; font-size: 13px !important; }
   /* Support button sits at the very bottom on mobile */
   .sw-fab { bottom: 16px !important; right: 16px !important; }
 
