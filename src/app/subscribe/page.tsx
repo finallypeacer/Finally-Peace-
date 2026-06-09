@@ -9,6 +9,7 @@ export default function SubscribePage() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState("");
+  const [gender, setGender] = useState<"male"|"female"|"">("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
@@ -109,6 +110,17 @@ export default function SubscribePage() {
                   <input className="sub-input" type="tel" placeholder="+1 (555) 000-0000" value={phone} onChange={e => setPhone(e.target.value)} />
                 </label>
               </div>
+              <div className="sub-gender-row">
+                <span className="sub-label-text">Gender</span>
+                <div className="sub-gender-btns">
+                  <button type="button" className={`sub-gender-btn ${gender === 'male' ? 'active' : ''}`} onClick={() => setGender('male')}>
+                    ♂ Male
+                  </button>
+                  <button type="button" className={`sub-gender-btn ${gender === 'female' ? 'active' : ''}`} onClick={() => setGender('female')}>
+                    ♀ Female
+                  </button>
+                </div>
+              </div>
               <label className="sub-label">
                 Email address
                 <input className="sub-input" type="email" placeholder="you@email.com" value={email} onChange={e => setEmail(e.target.value)} />
@@ -128,7 +140,7 @@ export default function SubscribePage() {
                 </label>
               </div>
             </div>
-            <button className="sub-btn" disabled={!firstName || !lastName || !age || !email || !address || !postal} onClick={() => setStep(2)}>
+            <button className="sub-btn" disabled={!firstName || !lastName || !age || !gender || !email || !address || !postal} onClick={() => setStep(2)}>
               Continue →
             </button>
             <p className="sub-fine">No spam. We email you once when it&apos;s your turn.</p>
