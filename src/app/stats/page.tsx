@@ -50,14 +50,14 @@ const DEVICES = [
   { label: "Tablet", pct: 6, color: "#bfdbfe" },
 ];
 
-/* Click hotspots on the page mockup (x/y in %, size px, delay s) */
+/* Click hotspots positioned over the real site screenshot (x/y in %) */
 const HOTSPOTS = [
-  { x: 50, y: 73, r: 78, delay: 0,   ping: true  }, // Join the waitlist (primary)
-  { x: 34, y: 60, r: 54, delay: 0.6, ping: true  }, // See the plans
-  { x: 88, y: 12, r: 46, delay: 1.1, ping: true  }, // Open the app (nav)
-  { x: 63, y: 60, r: 38, delay: 1.7, ping: false }, // How it works
-  { x: 50, y: 38, r: 30, delay: 2.2, ping: false }, // hero
-  { x: 60, y: 12, r: 26, delay: 2.6, ping: false }, // nav FAQ
+  { x: 69, y: 4,  r: 74, delay: 0,   ping: true  }, // Join the waitlist (nav)
+  { x: 43.5, y: 32, r: 62, delay: 0.6, ping: true  }, // See the plans
+  { x: 88, y: 4,  r: 50, delay: 1.1, ping: true  }, // Open the app (nav)
+  { x: 57, y: 32, r: 42, delay: 1.7, ping: false }, // How it works
+  { x: 50, y: 16, r: 34, delay: 2.2, ping: false }, // hero heading
+  { x: 47, y: 4,  r: 26, delay: 2.6, ping: false }, // nav links
 ];
 
 const TOP_CLICKS = [
@@ -185,29 +185,10 @@ export default function StatsPage() {
             <span className="st-card-sub">where visitors tap</span>
           </div>
           <div className="st-clickmap">
-            {/* Mini page mockup */}
+            {/* Real site screenshot with heat overlay */}
             <div className="st-mockup">
-              <div className="st-mock-nav">
-                <span className="st-mock-logo" />
-                <span className="st-mock-links">
-                  <i /><i /><i /><i />
-                </span>
-                <span className="st-mock-navbtn" />
-              </div>
-              <div className="st-mock-hero">
-                <span className="st-mock-pill" />
-                <span className="st-mock-h1" />
-                <span className="st-mock-h1 short" />
-                <span className="st-mock-p" />
-                <span className="st-mock-p short" />
-                <div className="st-mock-btns">
-                  <span className="st-mock-btn primary" />
-                  <span className="st-mock-btn" />
-                </div>
-                <span className="st-mock-cta" />
-              </div>
-
-              {/* Heat blobs + pings */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/site-preview.png" alt="Finally Peace homepage" className="st-mock-img" />
               {HOTSPOTS.map((h, i) => (
                 <span key={i}
                   className={`st-heat ${h.ping ? "ping" : ""}`}
