@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import "./stats.css";
 
 /* ------------------------------------------------------------------ *
- * Demo analytics — seeded numbers that drift up slightly over time so
- * the dashboard feels live. Replace with real data when a backend exists.
+ * Demo analytics — seeded numbers that drift up over time so the
+ * dashboard feels live. Replace with real data when a backend exists.
  * ------------------------------------------------------------------ */
 
 const SIGNUPS_BASE = 450;
@@ -21,7 +21,7 @@ function drift(base: number, perDay: number): number {
   } catch { return base; }
 }
 
-const SIGNUPS_7D = [38, 52, 47, 61, 73, 58, 81]; // Mon–Sun
+const SIGNUPS_7D = [38, 52, 47, 61, 73, 58, 81];
 const DAY_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 const TOP_CITIES = [
@@ -36,12 +36,12 @@ const TOP_CITIES = [
 ];
 
 const COUNTRIES = [
-  { name: "United States", flag: "🇺🇸", pct: 38 },
-  { name: "Canada", flag: "🇨🇦", pct: 31 },
-  { name: "United Kingdom", flag: "🇬🇧", pct: 14 },
-  { name: "Australia", flag: "🇦🇺", pct: 9 },
-  { name: "Ireland", flag: "🇮🇪", pct: 5 },
-  { name: "Other", flag: "🌍", pct: 3 },
+  { code: "US", name: "United States", pct: 38 },
+  { code: "CA", name: "Canada", pct: 31 },
+  { code: "UK", name: "United Kingdom", pct: 14 },
+  { code: "AU", name: "Australia", pct: 9 },
+  { code: "IE", name: "Ireland", pct: 5 },
+  { code: "··", name: "Other", pct: 3 },
 ];
 
 const DEVICES = [
@@ -49,6 +49,56 @@ const DEVICES = [
   { label: "Desktop", pct: 26, color: "#60a5fa" },
   { label: "Tablet", pct: 6, color: "#bfdbfe" },
 ];
+
+/* ---- Deterministic signup list (450 emails) ---- */
+const FIRST = ["james","mary","robert","patricia","john","jennifer","michael","linda","david","elizabeth","william","barbara","richard","susan","joseph","jessica","thomas","sarah","charles","karen","chris","nancy","daniel","lisa","matthew","betty","anthony","sandra","mark","ashley","donald","emily","steven","kimberly","paul","donna","andrew","michelle","josh","carol","kevin","amanda","brian","melissa","george","deborah","ryan","stephanie","aiden","olivia","liam","emma","noah","ava","lucas","sophia","ethan","isabella","mason","mia"];
+const LAST = ["smith","johnson","williams","brown","jones","garcia","miller","davis","rodriguez","martinez","hernandez","lopez","gonzalez","wilson","anderson","taylor","thomas","moore","jackson","martin","lee","perez","thompson","white","harris","sanchez","clark","ramirez","lewis","robinson","walker","young","allen","king","wright","scott","torres","nguyen","hill","flores","green","adams","nelson","baker","hall","rivera","campbell","mitchell","carter","roberts","patel","kim","chen","murphy","cooper","reed","bailey","cox","ward","morgan"];
+const DOMAINS = ["gmail.com","outlook.com","yahoo.com","icloud.com","proton.me","hotmail.com"];
+const SIGNUP_CITIES = ["Toronto","New York","London","Vancouver","Los Angeles","Sydney","Chicago","Dublin","Boston","Calgary","Manchester","Melbourne","Seattle","Ottawa","Austin","Leeds","Brisbane","Denver","Montréal","Glasgow"];
+
+function mulberry32(seed: number) {
+  return function () {
+    seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+interface Signup { name: string; email: string; masked: string; city: string; initials: string; mins: number; hue: number; }
+
+function buildSignups(n: number): Signup[] {
+  const rnd = mulberry32(20260608);
+  const out: Signup[] = [];
+  let mins = 4;
+  for (let i = 0; i < n; i++) {
+    const f = FIRST[Math.floor(rnd() * FIRST.length)];
+    const l = LAST[Math.floor(rnd() * LAST.length)];
+    const d = DOMAINS[Math.floor(rnd() * DOMAINS.length)];
+    const sep = rnd() < 0.5 ? "." : "";
+    const numTail = rnd() < 0.4 ? String(Math.floor(rnd() * 90) + 10) : "";
+    const local = `${f}${sep}${l}${numTail}`;
+    const email = `${local}@${d}`;
+    const visible = local.slice(0, 2);
+    const masked = `${visible}${"•".repeat(Math.max(3, Math.min(7, local.length - 2)))}@${d}`;
+    const name = `${f[0].toUpperCase()}${f.slice(1)} ${l[0].toUpperCase()}.`;
+    const initials = `${f[0]}${l[0]}`.toUpperCase();
+    const city = SIGNUP_CITIES[Math.floor(rnd() * SIGNUP_CITIES.length)];
+    out.push({ name, email, masked, city, initials, mins, hue: Math.floor(rnd() * 360) });
+    mins += Math.floor(rnd() * 70) + 8;
+  }
+  return out;
+}
+
+function timeAgo(mins: number): string {
+  if (mins < 60) return `${mins}m ago`;
+  const h = Math.floor(mins / 60);
+  if (h < 24) return `${h}h ago`;
+  const d = Math.floor(h / 24);
+  return `${d}d ago`;
+}
+
+const ALL_SIGNUPS = buildSignups(450);
 
 export default function StatsPage() {
   const [signups, setSignups] = useState(SIGNUPS_BASE);
@@ -64,28 +114,34 @@ export default function StatsPage() {
 
   return (
     <div className="st-wrap">
-      <header className="st-header">
-        <a href="/" className="st-logo">
-          <svg viewBox="0 0 86 52" width="64" height="34" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="stg" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3b82f6"/><stop offset="100%" stopColor="#1d4ed8"/>
-              </linearGradient>
-            </defs>
-            <ellipse cx="21" cy="26" rx="17" ry="13" fill="none" stroke="url(#stg)" strokeWidth="6" strokeLinecap="round"/>
-            <ellipse cx="55" cy="26" rx="17" ry="13" fill="none" stroke="url(#stg)" strokeWidth="6" strokeLinecap="round"/>
-          </svg>
-          <span className="st-logo-name">Finally Peace</span>
-        </a>
-        <span className="st-badge"><span className="st-live-dot" /> Live</span>
-      </header>
+      {/* Navy hero band */}
+      <div className="st-hero">
+        <div className="st-hero-inner">
+          <header className="st-header">
+            <a href="/" className="st-logo">
+              <svg viewBox="0 0 86 52" width="64" height="34" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="stg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#60a5fa"/><stop offset="100%" stopColor="#3b82f6"/>
+                  </linearGradient>
+                </defs>
+                <ellipse cx="21" cy="26" rx="17" ry="13" fill="none" stroke="url(#stg)" strokeWidth="6" strokeLinecap="round"/>
+                <ellipse cx="55" cy="26" rx="17" ry="13" fill="none" stroke="url(#stg)" strokeWidth="6" strokeLinecap="round"/>
+              </svg>
+              <span className="st-logo-name">Finally Peace</span>
+            </a>
+            <span className="st-badge"><span className="st-live-dot" /> Live</span>
+          </header>
 
-      <div className="st-title-row">
-        <h1>Waitlist analytics</h1>
-        <p>Real-time overview of signups and engagement.</p>
+          <div className="st-title-row">
+            <div className="st-eyebrow">Dashboard</div>
+            <h1>Waitlist <span className="serif">analytics.</span></h1>
+            <p>A real-time look at signups, reach, and engagement.</p>
+          </div>
+        </div>
       </div>
 
-      {/* KPI cards */}
+      {/* KPI cards — float over the hero */}
       <div className="st-kpis">
         <KPI label="Email signups" value={signups.toLocaleString()} delta="+12.4%" up icon={<IcoMail />} />
         <KPI label="Page clicks" value={clicks.toLocaleString()} delta="+8.1%" up icon={<IcoClick />} />
@@ -93,66 +149,91 @@ export default function StatsPage() {
         <KPI label="Signups today" value={today.toString()} delta="+18%" up icon={<IcoBolt />} />
       </div>
 
-      {/* Signups over time */}
-      <div className="st-card">
-        <div className="st-card-head">
-          <h2>Signups · last 7 days</h2>
-          <span className="st-card-sub">{SIGNUPS_7D.reduce((a, b) => a + b, 0)} this week</span>
-        </div>
-        <BarChart data={SIGNUPS_7D} labels={DAY_LABELS} />
-      </div>
-
-      <div className="st-grid-2">
-        {/* Top cities */}
+      <div className="st-main">
+        {/* Signups over time */}
         <div className="st-card">
-          <div className="st-card-head"><h2>Top cities</h2></div>
-          <ul className="st-city-list">
-            {TOP_CITIES.map((c, i) => {
-              const max = TOP_CITIES[0].count;
-              return (
-                <li key={c.city}>
-                  <span className="st-city-rank">{i + 1}</span>
-                  <span className="st-city-name">{c.city} <em>{c.country}</em></span>
-                  <span className="st-city-bar"><span style={{ width: `${(c.count / max) * 100}%` }} /></span>
-                  <span className="st-city-count">{c.count}</span>
+          <div className="st-card-head">
+            <h2>Signups · last 7 days</h2>
+            <span className="st-card-sub">{SIGNUPS_7D.reduce((a, b) => a + b, 0)} this week</span>
+          </div>
+          <BarChart data={SIGNUPS_7D} labels={DAY_LABELS} />
+        </div>
+
+        <div className="st-grid-2">
+          {/* Top cities */}
+          <div className="st-card">
+            <div className="st-card-head"><h2>Top cities</h2></div>
+            <ul className="st-city-list">
+              {TOP_CITIES.map((c, i) => {
+                const max = TOP_CITIES[0].count;
+                return (
+                  <li key={c.city}>
+                    <span className="st-city-rank">{i + 1}</span>
+                    <span className="st-city-name">{c.city} <em>{c.country}</em></span>
+                    <span className="st-city-bar"><span style={{ width: `${(c.count / max) * 100}%` }} /></span>
+                    <span className="st-city-count">{c.count}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          {/* Countries */}
+          <div className="st-card">
+            <div className="st-card-head"><h2>By country</h2></div>
+            <ul className="st-country-list">
+              {COUNTRIES.map(c => (
+                <li key={c.name}>
+                  <span className="st-code">{c.code}</span>
+                  <span className="st-country-name">{c.name}</span>
+                  <span className="st-country-bar"><span style={{ width: `${c.pct}%` }} /></span>
+                  <span className="st-country-pct">{c.pct}%</span>
                 </li>
-              );
-            })}
-          </ul>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        {/* Countries */}
+        {/* Devices */}
         <div className="st-card">
-          <div className="st-card-head"><h2>By country</h2></div>
-          <ul className="st-country-list">
-            {COUNTRIES.map(c => (
-              <li key={c.name}>
-                <span className="st-flag">{c.flag}</span>
-                <span className="st-country-name">{c.name}</span>
-                <span className="st-country-bar"><span style={{ width: `${c.pct}%` }} /></span>
-                <span className="st-country-pct">{c.pct}%</span>
-              </li>
+          <div className="st-card-head"><h2>Devices</h2></div>
+          <div className="st-device-bar">
+            {DEVICES.map(d => (
+              <span key={d.label} className="st-device-seg" style={{ width: `${d.pct}%`, background: d.color }} title={`${d.label} ${d.pct}%`} />
             ))}
-          </ul>
+          </div>
+          <div className="st-device-legend">
+            {DEVICES.map(d => (
+              <span key={d.label}><i style={{ background: d.color }} /> {d.label} <strong>{d.pct}%</strong></span>
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* Devices */}
-      <div className="st-card">
-        <div className="st-card-head"><h2>Devices</h2></div>
-        <div className="st-device-bar">
-          {DEVICES.map(d => (
-            <span key={d.label} className="st-device-seg" style={{ width: `${d.pct}%`, background: d.color }} title={`${d.label} ${d.pct}%`} />
-          ))}
+        {/* Recent signups list */}
+        <div className="st-card">
+          <div className="st-card-head">
+            <h2>Recent signups</h2>
+            <span className="st-card-sub">{ALL_SIGNUPS.length} total</span>
+          </div>
+          <div className="st-signups">
+            {ALL_SIGNUPS.map((s, i) => (
+              <div className="st-signup" key={i}>
+                <span className="st-avatar" style={{ background: `linear-gradient(135deg, hsl(${s.hue} 70% 58%), hsl(${(s.hue + 40) % 360} 72% 46%))` }}>
+                  {s.initials}
+                </span>
+                <span className="st-signup-info">
+                  <span className="st-signup-name">{s.name}</span>
+                  <span className="st-signup-email">{s.masked}</span>
+                </span>
+                <span className="st-signup-city">{s.city}</span>
+                <span className="st-signup-time">{timeAgo(s.mins)}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="st-device-legend">
-          {DEVICES.map(d => (
-            <span key={d.label}><i style={{ background: d.color }} /> {d.label} <strong>{d.pct}%</strong></span>
-          ))}
-        </div>
-      </div>
 
-      <p className="st-foot">Demo analytics · updates as data comes in</p>
+        <p className="st-foot">Demo analytics · emails masked for privacy</p>
+      </div>
     </div>
   );
 }
