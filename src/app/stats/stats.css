@@ -1,0 +1,129 @@
+.st-wrap {
+  min-height: 100dvh;
+  background: #f0f4fb;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #0f172a;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px 64px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.st-wrap * { box-sizing: border-box; }
+
+/* Header */
+.st-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 0;
+}
+.st-logo { display: flex; align-items: center; gap: 6px; text-decoration: none; }
+.st-logo-name {
+  font-family: "Instrument Serif", Georgia, serif; font-style: italic;
+  font-size: 20px; font-weight: 700; color: #0f172a;
+}
+.st-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #fff; border: 1px solid #e4eaf4; border-radius: 100px;
+  padding: 6px 14px; font-size: 13px; font-weight: 600; color: #16a34a;
+}
+.st-live-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22,163,74,0.18); animation: stPulse 2s ease infinite;
+}
+@keyframes stPulse {
+  0%,100% { box-shadow: 0 0 0 3px rgba(22,163,74,0.18); }
+  50%      { box-shadow: 0 0 0 6px rgba(22,163,74,0.06); }
+}
+
+/* Title */
+.st-title-row { margin: 8px 0 22px; }
+.st-title-row h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; margin: 0; }
+.st-title-row p { font-size: 15px; color: #64748b; margin: 6px 0 0; }
+
+/* KPI cards */
+.st-kpis {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 16px;
+}
+.st-kpi {
+  background: #fff; border: 1px solid #e4eaf4; border-radius: 18px;
+  padding: 18px; box-shadow: 0 2px 8px rgba(15,23,42,0.04);
+}
+.st-kpi-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.st-kpi-ico {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: #eff6ff; color: #2563eb;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.st-kpi-delta { font-size: 12px; font-weight: 700; }
+.st-kpi-delta.up { color: #16a34a; }
+.st-kpi-delta.down { color: #e11d48; }
+.st-kpi-value { font-size: 28px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+.st-kpi-label { font-size: 13px; color: #64748b; margin-top: 6px; font-weight: 500; }
+
+/* Cards */
+.st-card {
+  background: #fff; border: 1px solid #e4eaf4; border-radius: 18px;
+  padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(15,23,42,0.04);
+}
+.st-card-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 18px; }
+.st-card-head h2 { font-size: 16px; font-weight: 700; margin: 0; }
+.st-card-sub { font-size: 13px; color: #64748b; font-weight: 600; }
+.st-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* Bar chart */
+.st-chart { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; height: 180px; }
+.st-chart-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; height: 100%; }
+.st-chart-val { font-size: 12px; font-weight: 700; color: #475569; }
+.st-chart-track { flex: 1; width: 100%; display: flex; align-items: flex-end; justify-content: center; }
+.st-chart-bar {
+  width: 72%; min-height: 4px; border-radius: 8px 8px 4px 4px;
+  background: linear-gradient(180deg, #3b82f6, #2563eb);
+  transition: height 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.st-chart-lbl { font-size: 12px; color: #64748b; font-weight: 600; }
+
+/* City list */
+.st-city-list, .st-country-list { list-style: none; margin: 0; padding: 0; }
+.st-city-list li {
+  display: grid; grid-template-columns: 22px 1fr 70px 32px;
+  align-items: center; gap: 10px; padding: 8px 0;
+}
+.st-city-rank {
+  width: 22px; height: 22px; border-radius: 6px; background: #f1f5f9;
+  color: #64748b; font-size: 12px; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.st-city-name { font-size: 14px; font-weight: 600; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.st-city-name em { font-style: normal; color: #94a3b8; font-size: 11px; font-weight: 600; }
+.st-city-bar { height: 7px; background: #eef2f9; border-radius: 6px; overflow: hidden; }
+.st-city-bar span { display: block; height: 100%; background: linear-gradient(90deg, #60a5fa, #2563eb); border-radius: 6px; }
+.st-city-count { font-size: 13px; font-weight: 700; text-align: right; color: #0f172a; }
+
+/* Country list */
+.st-country-list li {
+  display: grid; grid-template-columns: 24px 1fr 80px 36px;
+  align-items: center; gap: 10px; padding: 8px 0;
+}
+.st-flag { font-size: 18px; }
+.st-country-name { font-size: 14px; font-weight: 600; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.st-country-bar { height: 7px; background: #eef2f9; border-radius: 6px; overflow: hidden; }
+.st-country-bar span { display: block; height: 100%; background: linear-gradient(90deg, #818cf8, #6366f1); border-radius: 6px; }
+.st-country-pct { font-size: 13px; font-weight: 700; text-align: right; color: #0f172a; }
+
+/* Devices */
+.st-device-bar { display: flex; height: 28px; border-radius: 8px; overflow: hidden; gap: 3px; }
+.st-device-seg { transition: width 0.6s ease; }
+.st-device-legend { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 14px; font-size: 13px; color: #64748b; }
+.st-device-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.st-device-legend i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+.st-device-legend strong { color: #0f172a; }
+
+.st-foot { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 8px; }
+
+/* Mobile */
+@media (max-width: 720px) {
+  .st-kpis { grid-template-columns: 1fr 1fr; }
+  .st-grid-2 { grid-template-columns: 1fr; }
+  .st-title-row h1 { font-size: 24px; }
+  .st-kpi-value { font-size: 24px; }
+}
