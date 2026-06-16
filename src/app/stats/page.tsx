@@ -50,6 +50,25 @@ const DEVICES = [
   { label: "Tablet", pct: 6, color: "#bfdbfe" },
 ];
 
+/* Click hotspots on the page mockup (x/y in %, size px, delay s) */
+const HOTSPOTS = [
+  { x: 50, y: 73, r: 78, delay: 0,   ping: true  }, // Join the waitlist (primary)
+  { x: 34, y: 60, r: 54, delay: 0.6, ping: true  }, // See the plans
+  { x: 88, y: 12, r: 46, delay: 1.1, ping: true  }, // Open the app (nav)
+  { x: 63, y: 60, r: 38, delay: 1.7, ping: false }, // How it works
+  { x: 50, y: 38, r: 30, delay: 2.2, ping: false }, // hero
+  { x: 60, y: 12, r: 26, delay: 2.6, ping: false }, // nav FAQ
+];
+
+const TOP_CLICKS = [
+  { label: "“Join the waitlist”", tag: "Primary CTA", count: 1240 },
+  { label: "“See the plans”", tag: "Hero button", count: 872 },
+  { label: "“Open the app”", tag: "Nav", count: 541 },
+  { label: "“How it works”", tag: "Hero button", count: 408 },
+  { label: "“The plan”", tag: "Nav link", count: 296 },
+  { label: "“FAQ”", tag: "Nav link", count: 184 },
+];
+
 /* ---- Deterministic signup list (450 emails) ---- */
 const FIRST = ["james","mary","robert","patricia","john","jennifer","michael","linda","david","elizabeth","william","barbara","richard","susan","joseph","jessica","thomas","sarah","charles","karen","chris","nancy","daniel","lisa","matthew","betty","anthony","sandra","mark","ashley","donald","emily","steven","kimberly","paul","donna","andrew","michelle","josh","carol","kevin","amanda","brian","melissa","george","deborah","ryan","stephanie","aiden","olivia","liam","emma","noah","ava","lucas","sophia","ethan","isabella","mason","mia"];
 const LAST = ["smith","johnson","williams","brown","jones","garcia","miller","davis","rodriguez","martinez","hernandez","lopez","gonzalez","wilson","anderson","taylor","thomas","moore","jackson","martin","lee","perez","thompson","white","harris","sanchez","clark","ramirez","lewis","robinson","walker","young","allen","king","wright","scott","torres","nguyen","hill","flores","green","adams","nelson","baker","hall","rivera","campbell","mitchell","carter","roberts","patel","kim","chen","murphy","cooper","reed","bailey","cox","ward","morgan"];
@@ -157,6 +176,67 @@ export default function StatsPage() {
             <span className="st-card-sub">{SIGNUPS_7D.reduce((a, b) => a + b, 0)} this week</span>
           </div>
           <BarChart data={SIGNUPS_7D} labels={DAY_LABELS} />
+        </div>
+
+        {/* Click activity heatmap */}
+        <div className="st-card">
+          <div className="st-card-head">
+            <h2>Click activity</h2>
+            <span className="st-card-sub">where visitors tap</span>
+          </div>
+          <div className="st-clickmap">
+            {/* Mini page mockup */}
+            <div className="st-mockup">
+              <div className="st-mock-nav">
+                <span className="st-mock-logo" />
+                <span className="st-mock-links">
+                  <i /><i /><i /><i />
+                </span>
+                <span className="st-mock-navbtn" />
+              </div>
+              <div className="st-mock-hero">
+                <span className="st-mock-pill" />
+                <span className="st-mock-h1" />
+                <span className="st-mock-h1 short" />
+                <span className="st-mock-p" />
+                <span className="st-mock-p short" />
+                <div className="st-mock-btns">
+                  <span className="st-mock-btn primary" />
+                  <span className="st-mock-btn" />
+                </div>
+                <span className="st-mock-cta" />
+              </div>
+
+              {/* Heat blobs + pings */}
+              {HOTSPOTS.map((h, i) => (
+                <span key={i}
+                  className={`st-heat ${h.ping ? "ping" : ""}`}
+                  style={{
+                    left: `${h.x}%`, top: `${h.y}%`,
+                    width: `${h.r}px`, height: `${h.r}px`,
+                    animationDelay: `${h.delay}s`,
+                  }}
+                />
+              ))}
+            </div>
+
+            {/* Top clicked elements */}
+            <ul className="st-click-list">
+              {TOP_CLICKS.map((c, i) => {
+                const max = TOP_CLICKS[0].count;
+                return (
+                  <li key={i}>
+                    <span className="st-click-dot" style={{ opacity: 0.35 + 0.65 * (c.count / max) }} />
+                    <span className="st-click-info">
+                      <span className="st-click-label">{c.label}</span>
+                      <span className="st-click-tag">{c.tag}</span>
+                    </span>
+                    <span className="st-click-count">{c.count.toLocaleString()}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
 
         <div className="st-grid-2">
