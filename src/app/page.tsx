@@ -325,7 +325,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ WHAT YOU GET FOR $25 ============ */}
+      {/* ============ WHAT YOU GET FOR $15 ============ */}
       <section id="easy">
         <div className="container">
           <div className="section-head-center">
@@ -448,7 +448,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ PLAN (single $25 subscription) ============ */}
+      {/* ============ PLAN (single $15 subscription) ============ */}
       <section id="plans">
         <span className="plan-deco plan-deco-1"></span>
         <span className="plan-deco plan-deco-2"></span>
@@ -893,15 +893,14 @@ export default function Home() {
           <div className="faq-list">
             <details className="faq-item">
               <summary className="faq-q">
-                Is this real coverage or just a savings plan??
+                Is this real coverage or just a savings plan?
               </summary>
               <div className="faq-a">
-                Real coverage. Every Finally Peace subscription includes a
-                licensed coverage plan in your name, issued by a
-                reputable licensed carrier. The subscription wraps the policy
-                with our service layer - funeral arrangements, repatriation,
-                concierge, AI memorial - but the underlying product is regulated
-                final-expense coverage.
+                Real coverage. Every membership includes a licensed coverage
+                plan in your name, issued by a reputable licensed carrier. On
+                top of that, Finally Peace adds the planning layer - a secure
+                profile for your wishes, partner-coordinated services, and
+                concierge support - so everything is organized in one place.
               </div>
             </details>
             <details className="faq-item">
@@ -926,9 +925,10 @@ export default function Home() {
             <details className="faq-item">
               <summary className="faq-q">What if I die abroad?</summary>
               <div className="faq-a">
-                Yes. International repatriation is included in your $25
-                subscription. Finally Peace arranges and pays for transport of your
-                body back to your home country, anywhere in the world.
+                International repatriation is available as an optional add-on,
+                coordinated through our partner network to bring you back to your
+                home country. Your wishes and contacts stay saved in your
+                profile, so your family always knows the next step.
               </div>
             </details>
             <details className="faq-item">
@@ -958,9 +958,9 @@ export default function Home() {
             <details className="faq-item">
               <summary className="faq-q">From what age can I sign up?</summary>
               <div className="faq-a">
-                Finally Peace is available from age 18 to 75. Sign up takes 8
+                Finally Peace is available from age 18 to 75. Sign up takes a few
                 minutes on your phone - no medical exam, just a 5-question health
-                questionnaire.
+                questionnaire, subject to approval.
               </div>
             </details>
             <details className="faq-item">
@@ -975,14 +975,13 @@ export default function Home() {
             </details>
             <details className="faq-item">
               <summary className="faq-q">
-                If I sign up young, does my price go up as I age?
+                Why is it better to start young?
               </summary>
               <div className="faq-a">
-                No. Your rate band is set at signup and frozen for life - even
-                when you cross into a higher age band years later. A 32-year-old
-                who signs up today will pay the 32-year-old rate at 65. This is
-                the single biggest reason to start now: the carrier locks your
-                rate at today&apos;s age - forever.
+                Pricing follows published age bands, and your final rate is set
+                by the licensed carrier at signup, subject to approval. Starting
+                earlier means lower entry pricing and far less to sort out later
+                - your wishes documented and your plan ready for your family.
               </div>
             </details>
           </div>
