@@ -896,11 +896,12 @@ export default function Home() {
                 Is this real coverage or just a savings plan?
               </summary>
               <div className="faq-a">
-                Real coverage. Every membership includes a licensed coverage
-                plan in your name, issued by a reputable licensed carrier. On
-                top of that, Finally Peace adds the planning layer - a secure
-                profile for your wishes, partner-coordinated services, and
-                concierge support - so everything is organized in one place.
+                Real coverage. The coverage plan in your name is issued by a
+                licensed carrier - not Finally Peace. Funerals and related
+                services are carried out by our vetted, licensed partners - not
+                us. What Finally Peace does is help you plan and navigate it all:
+                a secure profile for your wishes, the right partners connected
+                for you, and concierge support to guide your family through it.
               </div>
             </details>
             <details className="faq-item">
