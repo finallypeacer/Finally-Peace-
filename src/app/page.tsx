@@ -239,8 +239,8 @@ export default function Home() {
           </div>
           <div className="trust-logos">
             <div className="trust-logo">
-              <div className="trust-logo-name">Complete Coverage</div>
-              <div className="trust-logo-tag">Tier 1 licensed carrier</div>
+              <div className="trust-logo-name">Membership Coverage</div>
+              <div className="trust-logo-tag">Dignity &amp; peace of mind</div>
             </div>
             <div className="trust-logo">
               <div className="trust-logo-name">Funeral network</div>
