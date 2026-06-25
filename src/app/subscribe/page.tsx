@@ -239,7 +239,7 @@ export default function SubscribePage() {
                   </div>
                 ))}
               </div>
-              <div className="sub-plan-note">No medical exam · Cancel anytime after 12 months · Rate locked for life</div>
+              <div className="sub-plan-note">No medical exam · Cancel anytime · Rate locked for life</div>
             </div>
 
             <div className="sub-btn-row">
@@ -300,7 +300,7 @@ export default function SubscribePage() {
 
       <div className="sub-trust">
         <span>✓ No medical exam</span>
-        <span>✓ Cancel anytime after 12 months</span>
+        <span>✓ Cancel anytime</span>
         <span>✓ Rate locked for life</span>
       </div>
     </div>

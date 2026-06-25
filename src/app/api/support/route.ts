@@ -13,7 +13,7 @@ function cannedReply(q: string): string {
   if (/what.*includ|what.*get|what.*cover|benefit|plan|everything/i.test(t))
     return "Your $15/month subscription covers everything: funeral arrangements (cremation, burial, or aquamation), legal preferences (will, POA, estate paperwork), body transportation worldwide including international repatriation, and a secure profile where you customize and save every choice.";
   if (/cancel|quit|stop|leave|refund/i.test(t))
-    return "There's a 12-month minimum commitment, then you can cancel anytime. Your coverage simply lapses if you stop paying — no penalties.";
+    return "You can cancel anytime — no commitment, no penalties. Your coverage simply lapses if you stop paying, and you can rejoin whenever you're ready.";
   if (/wait|period|when.*cover|24 month|day 1|immediate|instant/i.test(t))
     return "Accidental death is covered from day 1. For natural causes, full benefits pay out after 24 months of premiums. During the first 24 months your family receives a pro-rated payout.";
   if (/sign.?up|join|start|how.*work|enroll|register|begin|get started/i.test(t))
@@ -61,7 +61,7 @@ TRANSPORT: Body transport worldwide. International repatriation if you die abroa
 
 Key facts:
 - No medical exam required — just a 5-question health questionnaire
-- 12-month minimum commitment, then cancel anytime
+- Cancel anytime — no commitment, no penalties
 - Accidental death covered from day 1; natural causes after 24 months of premiums
 - Family bundle: 10% off when two adults in the same household subscribe
 - Available ages 18–75

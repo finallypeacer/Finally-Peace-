@@ -212,8 +212,7 @@ export default function Home() {
                   world-class licensed carrier
                 </span>
                 <span>
-                  <span className="check">✓</span>&nbsp; Cancel anytime after 12
-                  months
+                  <span className="check">✓</span>&nbsp; Cancel anytime
                 </span>
                 <span>
                   <span className="check">✓</span>&nbsp; No medical exam
@@ -579,8 +578,7 @@ export default function Home() {
             Above 40, premiums step up by age band - your final rate is set by
             our licensed carrier after a 60-second underwriting questionnaire.
             Family bundle: 10% off when two adults in your household subscribe.
-            Lock your current rate for life with a single 12-month upfront
-            payment.
+            Cancel anytime - no commitment, no penalties.
           </div>
 
           <div className="rel-section">
@@ -672,8 +670,7 @@ export default function Home() {
                 <span className="ic-x">×</span>Lose what you&apos;ve paid in
               </div>
               <div className="col-atlas">
-                <span className="ic-check">✓</span>Cancel anytime after 12
-                months
+                <span className="ic-check">✓</span>Cancel anytime
               </div>
             </div>
 
@@ -926,9 +923,9 @@ export default function Home() {
             <details className="faq-item">
               <summary className="faq-q">What if I cancel?</summary>
               <div className="faq-a">
-                12-month minimum commitment. After that, cancel anytime. Your
-                policy lapses if you stop paying. You can also lock your current
-                rate for life by paying 12 months upfront once.
+                Cancel anytime - no commitment, no penalties. Your coverage
+                simply lapses if you stop paying. Rejoin whenever you&apos;re
+                ready.
               </div>
             </details>
             <details className="faq-item">
@@ -989,8 +986,8 @@ export default function Home() {
                 Above 40, premiums step up in published age bands: 41–50 (×1.5),
                 51–60 (×2.2), 61–70 (×3.5), 71–80 (×5.5). Health adjustments are
                 on top: Preferred (non-smoker, healthy) gets −10%,
-                smokers/controlled conditions get +40%. Lock your rate band for
-                life with a one-time 12-month upfront payment.
+                smokers/controlled conditions get +40%. Your rate band is locked
+                for life from the day you sign up.
               </div>
             </details>
             <details className="faq-item">
