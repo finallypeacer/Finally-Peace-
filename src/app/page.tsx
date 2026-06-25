@@ -693,7 +693,8 @@ export default function Home() {
               <div className="step-num">2</div>
               <h3>Quick quiz</h3>
               <p>
-                5 health questions. No medical exam.
+                5 quick health questions - no medical exam, no paperwork. Just
+                a few taps, then the carrier reviews your answers.
               </p>
             </div>
             <div className="step">
