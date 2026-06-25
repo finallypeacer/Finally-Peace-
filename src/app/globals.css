@@ -177,7 +177,7 @@ body { font-family: var(--qw-sans) !important; }
   /* ============ HERO ============ */
   .hero {
     position: relative;
-    padding: 80px 0 100px;
+    padding: 80px 0 48px;
     background: var(--white);
     overflow: hidden;
   }
@@ -223,7 +223,7 @@ body { font-family: var(--qw-sans) !important; }
   /* Waitlist CTA in hero — hidden on desktop (nav has it), shown on mobile */
   .hero-waitlist-btn { display: none; }
   .hero-trust {
-    display: flex; gap: 28px; margin-top: 56px; flex-wrap: wrap;
+    display: flex; gap: 28px; margin-top: 36px; flex-wrap: wrap;
     color: var(--slate-500); font-size: 15px; align-items: center;
   }
   .hero-trust .check { color: var(--blue-600); font-weight: 700; }
@@ -773,7 +773,7 @@ body { font-family: var(--qw-sans) !important; }
 
   /* ============ CARRIER TRUST STRIP ============ */
   .trust-strip {
-    padding: 56px 0;
+    padding: 28px 0 48px;
     background: var(--white);
     border-bottom: 1px solid var(--slate-200);
   }
