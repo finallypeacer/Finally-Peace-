@@ -53,11 +53,11 @@ About Finally Peace:
 - Launching in Ontario first; currently accepting members worldwide
 - Rate is locked at signup age and never increases
 
-What's included in the $15/month subscription:
-FUNERAL: Choice of cremation, traditional burial, green burial, or aquamation. Casket or urn (3 styles per type). Full service OR direct cremation. Live-streamed memorial. Obituary in 2 publications. 10 certified death certificates.
-LEGAL: Attorney-prepared will. Power of attorney + advance directive. Estate paperwork & probate guidance. Digital legacy management. Family beneficiary setup.
+What the $15/month membership lets you organize (Finally Peace is a planning service — partners deliver the actual services; we do not pay for funerals or transport):
+FUNERAL: Choose cremation, traditional burial, green burial, or aquamation. Save your casket/urn preference. Full service OR direct cremation — your choice. Record memorial & obituary wishes. Every detail saved for your family.
+LEGAL: Will drafted by partner attorneys (licensed lawyers, not Finally Peace). Power of attorney + advance directive. Estate paperwork & probate guidance. Digital legacy management. Family beneficiary setup.
 SECURE PROFILE: Customize your funeral your way. Save transportation preferences. Store legal preferences securely. Private & encrypted on your account. Ready the moment family needs it.
-TRANSPORT: Body transport worldwide. International repatriation if you die abroad. Family travel for 2 distant relatives. Pall-bearer arrangement. Burial plot or scattering location coordination.
+TRANSPORT: Optional add-on, ready when needed. Body transport & international repatriation. Family travel coordination. Pall-bearer arrangement. Arranged through our partner network.
 
 Key facts:
 - No medical exam required — just a 5-question health questionnaire

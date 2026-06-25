@@ -508,21 +508,20 @@ export default function Home() {
                   <div className="single-plan-col-title">FUNERAL</div>
                   <ul className="single-plan-list">
                     <li>
-                      Choice of cremation, traditional burial, green burial, or
+                      Choose cremation, traditional burial, green burial, or
                       aquamation
                     </li>
-                    <li>Casket or urn - three styles per type</li>
-                    <li>Full service OR direct cremation</li>
-                    <li>Live-streamed memorial for distant relatives</li>
-                    <li>Obituary in 2 publications</li>
-                    <li>10 certified death certificates</li>
+                    <li>Save your casket or urn preference</li>
+                    <li>Full service OR direct cremation - your choice</li>
+                    <li>Record memorial &amp; obituary wishes</li>
+                    <li>Every detail saved for your family</li>
                   </ul>
                 </div>
 
                 <div className="single-plan-col">
                   <div className="single-plan-col-title">LEGAL</div>
                   <ul className="single-plan-list">
-                    <li>Attorney-prepared will</li>
+                    <li>Will drafted by partner attorneys</li>
                     <li>Power of attorney + advance directive</li>
                     <li>Estate paperwork &amp; probate guidance</li>
                     <li>Digital legacy management</li>
@@ -544,11 +543,11 @@ export default function Home() {
                 <div className="single-plan-col">
                   <div className="single-plan-col-title">TRANSPORT</div>
                   <ul className="single-plan-list">
-                    <li>Body transport worldwide</li>
-                    <li>International repatriation if you die abroad</li>
-                    <li>Family travel for 2 distant relatives</li>
+                    <li>Optional add-on, ready when needed</li>
+                    <li>Body transport &amp; international repatriation</li>
+                    <li>Family travel coordination</li>
                     <li>Pall-bearer arrangement</li>
-                    <li>Burial plot or scattering location coordination</li>
+                    <li>Arranged through our partner network</li>
                   </ul>
                 </div>
               </div>
