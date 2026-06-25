@@ -794,7 +794,7 @@ export default function Home() {
               <div className="voice-stars">★ ★ ★ ★ ★</div>
               <div className="voice-quote">
                 &quot;My dad has early-onset Alzheimer&apos;s. Finally Peace is the
-                first product I&apos;ve ever seen that quietly handles the
+                first thing I&apos;ve seen that quietly helps you plan the
                 things you don&apos;t want to think about.&quot;
               </div>
               <div className="voice-author">
@@ -847,10 +847,9 @@ export default function Home() {
             <div className="voice-card">
               <div className="voice-stars">★ ★ ★ ★ ★</div>
               <div className="voice-quote">
-                &quot;When my mom passed last fall, Finally Peace handled the
-                funeral home, the casket, transport from Florida, and the
-                apartment cleanout. I made one phone call. They handled the
-                rest.&quot;
+                &quot;When my mom passed last fall, her wishes were already
+                written down in Finally Peace. We knew exactly what she wanted
+                and who to call. It turned a panic into a checklist.&quot;
               </div>
               <div className="voice-author">
                 <div className="voice-avatar">AT</div>
