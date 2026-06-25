@@ -637,17 +637,6 @@ export default function Home() {
             </div>
 
             <div className="compare-row">
-              <div className="col-label">Pricing transparency</div>
-              <div className="col-old">
-                <span className="ic-x">×</span>&quot;Call for a quote&quot;
-              </div>
-              <div className="col-atlas">
-                <span className="ic-check">✓</span>One price, $15/mo - no hidden
-                fees
-              </div>
-            </div>
-
-            <div className="compare-row">
               <div className="col-label">When you die, who handles it</div>
               <div className="col-old">
                 <span className="ic-x">×</span>Your family - alone, on the worst
