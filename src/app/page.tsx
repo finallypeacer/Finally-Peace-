@@ -193,8 +193,8 @@ export default function Home() {
               </h1>
               <p className="hero-sub">
                 End-of-life planning, rebuilt as one simple subscription. Join a
-                community that arranges your funeral, transportation, and legal
-                documents - all saved in your secure profile, so your family
+                community that organizes your funeral, transportation, and legal
+                preferences - all saved in your secure profile, so your family
                 never has to plan on the worst week of their life.
               </p>
               <div className="hero-actions">
