@@ -570,8 +570,8 @@ export default function Home() {
 
           <div className="pricing-note">
             <strong>About pricing.</strong> Headline prices apply ages 18–40.
-            Above 40, premiums step up by age band - your final rate is set by
-            our licensed carrier after a 60-second underwriting questionnaire.
+            Above 40, premiums step up by age band. Final rate, approval, and
+            conditions are determined by a licensed carrier, subject to review.
             Family bundle: 10% off when two adults in your household subscribe.
             Cancel anytime - no commitment, no penalties.
           </div>
