@@ -229,7 +229,7 @@ export default function SubscribePage() {
                 {[
                   "Funeral - your way (cremation, burial, aquamation)",
                   "Attorney-prepared will + estate paperwork",
-                  "$15,000 family runway + debt navigation",
+                  "Secure profile to customize & save your choices",
                   "Body transport worldwide + repatriation",
                   "Live-streamed memorial + 2 obituaries",
                   "24/7 dedicated concierge - one call handles all",

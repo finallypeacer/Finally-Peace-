@@ -11,7 +11,7 @@ function cannedReply(q: string): string {
   if (/price|cost|how much|\$15|15.?month|pricing|cheap|afford|fee/i.test(t))
     return "Finally Peace is $15/month — one flat price, no hidden fees, no tiers. Your rate is locked at your signup age and never increases, even as you get older.";
   if (/what.*includ|what.*get|what.*cover|benefit|plan|everything/i.test(t))
-    return "Your $15/month subscription covers everything: funeral arrangements (cremation, burial, or aquamation), legal help (will, POA, estate paperwork), debt navigation ($15,000 family runway + specialists), and body transportation worldwide including international repatriation.";
+    return "Your $15/month subscription covers everything: funeral arrangements (cremation, burial, or aquamation), legal documents (will, POA, estate paperwork), body transportation worldwide including international repatriation, and a secure profile where you customize and save every choice.";
   if (/cancel|quit|stop|leave|refund/i.test(t))
     return "There's a 12-month minimum commitment, then you can cancel anytime. Your coverage simply lapses if you stop paying — no penalties.";
   if (/wait|period|when.*cover|24 month|day 1|immediate|instant/i.test(t))
@@ -26,8 +26,8 @@ function cannedReply(q: string): string {
     return "Your subscription covers the full funeral: cremation, traditional burial, green burial, or aquamation — your choice. Casket or urn, live-streamed memorial, obituary in 2 publications, and 10 certified death certificates are all included.";
   if (/legal|will|poa|estate|power of attorney|probate/i.test(t))
     return "Legal help is fully included: an attorney-prepared will, power of attorney, advance directive, estate paperwork & probate guidance, digital legacy management, and family beneficiary setup.";
-  if (/debt|money|cash|benefit|family runway|creditor|loan/i.test(t))
-    return "The debt navigation benefit connects your family to specialists who restructure and negotiate outstanding obligations — plus a $15,000 cash benefit for family runway and apartment/room cleanout coordination.";
+  if (/profile|customi[sz]e|save|wishes|preferences|secure|account/i.test(t))
+    return "Your secure profile is where you customize and save every choice — your funeral preferences, transportation, and legal documents — all private, encrypted, and ready the moment your family needs them.";
   if (/transport|repatri|abroad|travel|body|move|ship/i.test(t))
     return "Body transport is included worldwide. If you pass abroad, international repatriation is covered. Family travel for 2 distant relatives and pall-bearer arrangement are also included.";
   if (/app|dashboard|download|install|phone|home screen|pwa/i.test(t))
@@ -48,7 +48,7 @@ function cannedReply(q: string): string {
 const SYSTEM_PROMPT = `You are the Finally Peace Support assistant. You help visitors understand the Finally Peace subscription, navigate the website, and answer questions.
 
 About Finally Peace:
-- Finally Peace is a $15/month subscription that covers end-of-life end-of-life needs globally
+- Finally Peace is a $15/month subscription for end-of-life planning, with a community and a secure profile to customize and save every choice
 - One flat price — no tiers, no hidden fees, no medical exam required
 - Launching in Ontario first; currently accepting members worldwide
 - Rate is locked at signup age and never increases
@@ -56,7 +56,7 @@ About Finally Peace:
 What's included in the $15/month subscription:
 FUNERAL: Choice of cremation, traditional burial, green burial, or aquamation. Casket or urn (3 styles per type). Full service OR direct cremation. Live-streamed memorial. Obituary in 2 publications. 10 certified death certificates.
 LEGAL: Attorney-prepared will. Power of attorney + advance directive. Estate paperwork & probate guidance. Digital legacy management. Family beneficiary setup.
-DEBT: Connection to debt restructuring specialists. Negotiation & reorganization support. Guidance through outstanding obligations. $15,000 cash benefit for family runway. Apartment/room cleanout coordination.
+SECURE PROFILE: Customize your funeral your way. Save transportation preferences. Store legal documents securely. Private & encrypted on your account. Ready the moment family needs it.
 TRANSPORT: Body transport worldwide. International repatriation if you die abroad. Family travel for 2 distant relatives. Pall-bearer arrangement. Burial plot or scattering location coordination.
 
 Key facts:
@@ -68,7 +68,7 @@ Key facts:
 - Signup takes about 8 minutes on your phone
 
 Website navigation:
-- "What you get" section — the 4 main benefits (funeral, legal, debt, transport)
+- "What you get" section — the 4 main benefits (funeral, legal, secure profile, transport)
 - "The plan" section — the $15/month plan card with full feature list
 - "How it works" — 3-step signup process
 - "Why Finally Peace" — what makes it different

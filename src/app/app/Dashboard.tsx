@@ -297,12 +297,12 @@ function WishesTab({ wishes, onChange }: { wishes: Wishes; onChange: (p: Partial
 function PlanTab({ data, onData }: { data: AppData; onData: (d: AppData) => void }) {
   const coverage = [
     { key: "funeral",   label: "Funeral - your way",  note: "Cremation, burial, service, paperwork" },
-    { key: "legal",     label: "Legal help",           note: "Will, POA, estate paperwork" },
-    { key: "debt",      label: "Debt navigation",      note: "$15,000 family runway + specialists" },
+    { key: "legal",     label: "Legal documents",      note: "Will, POA, estate paperwork" },
+    { key: "profile",   label: "Your secure profile",  note: "Customize & save every choice" },
     { key: "transport", label: "Transportation",       note: "Worldwide + international repatriation" },
   ];
   const CovIco: Record<string, React.ReactNode> = {
-    funeral: <IcoBurial />, legal: <IcoDoc />, debt: <IcoDebt />, transport: <IcoTransport />,
+    funeral: <IcoBurial />, legal: <IcoDoc />, profile: <IcoShield />, transport: <IcoTransport />,
   };
 
   return (
@@ -395,5 +395,4 @@ function IcoCremation() { return <svg {...ss}><path d="M12 3c-2 2.5-4 5-4 8h8c0-
 function IcoBurial()    { return <svg {...ss}><path d="M12 2C9 2 7 4 7 7v10a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V7c0-3-2-5-5-5z"/><line x1="12" y1="7" x2="12" y2="14"/><line x1="9" y1="10" x2="15" y2="10"/></svg>; }
 function IcoGreen()     { return <svg {...ss}><path d="M12 22V12"/><path d="M5 3a16 16 0 0 1 14 10H5z"/><path d="M3 14a16 16 0 0 1 9 8"/></svg>; }
 function IcoWater()     { return <svg {...ss}><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 0-4 10"/></svg>; }
-function IcoDebt()      { return <svg {...ss}><circle cx="12" cy="12" r="10"/><path d="M12 6v2m0 8v2M9.5 9.5a2.5 2.5 0 0 1 5 0c0 1.5-1 2-2.5 2.5V15"/></svg>; }
 function IcoTransport() { return <svg {...ss}><path d="M5 17H3v-5l2-5h13l3 5v5h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><line x1="9" y1="17" x2="15" y2="17"/></svg>; }

@@ -47,7 +47,7 @@ export async function POST(request: Request) {
                 product_data: {
                   name: "Finally Peace Subscription",
                   description:
-                    "End-of-life coverage subscription — funeral, legal, debt, and transportation, all included.",
+                    "End-of-life planning subscription — funeral, transportation, and legal documents, saved in your secure profile.",
                 },
               },
             },

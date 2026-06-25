@@ -190,10 +190,10 @@ export default function Home() {
                 For <span className="serif">what comes next.</span>
               </h1>
               <p className="hero-sub">
-                End-of-life coverage, rebuilt as one simple subscription.
-                Funeral, legal, debt, transportation - all included. So your
-                family never has to plan a funeral on the worst week of their
-                life.
+                End-of-life planning, rebuilt as one simple subscription. Join a
+                community that arranges your funeral, transportation, and legal
+                documents - all saved in your secure profile, so your family
+                never has to plan on the worst week of their life.
               </p>
               <div className="hero-actions">
                 <a href="#plans" className="btn btn-primary btn-lg">
@@ -253,7 +253,7 @@ export default function Home() {
           </div>
           <div className="trust-disclaimer">
             All policies are issued by a licensed, reputable carrier.
-            Concierge and debt-restructuring services are delivered through
+            Concierge and end-of-life planning services are delivered through
             Finally Peace&apos;s vetted partner network.
           </div>
         </div>
@@ -308,7 +308,7 @@ export default function Home() {
           <div className="problem-cards">
             <div className="problem-card">
               <h3>Funerals cost $9K–$15K - due in days.</h3>
-              <p>Most families aren&apos;t prepared. Many go into debt or crowdfund grief.</p>
+              <p>Most families aren&apos;t prepared. Many scramble or crowdfund grief.</p>
             </div>
             <div className="problem-card">
               <h3>Existing coverage is stuck in 1975.</h3>
@@ -316,7 +316,7 @@ export default function Home() {
             </div>
             <div className="problem-card">
               <h3>Your family handles everything - while grieving.</h3>
-              <p>Casket, transport, debt, the apartment, the estate. All on the worst week of their life.</p>
+              <p>Casket, transport, the apartment, the estate. All on the worst week of their life.</p>
             </div>
             <div className="problem-card">
               <h3>73% of people under 50 have no plan.</h3>
@@ -405,14 +405,13 @@ export default function Home() {
                 strokeLinejoin="round"
               >
                 <path d="M12 2L4 6v6c0 5 3.5 9.7 8 11 4.5-1.3 8-6 8-11V6l-8-4z" />
-                <line x1="9" y1="11" x2="15" y2="11" />
-                <line x1="9" y1="14" x2="15" y2="14" />
+                <path d="m9 12 2 2 4-4" />
               </svg>
-              <h3>Debt navigation</h3>
+              <h3>Your secure profile</h3>
               <p>
-                Your family is connected to specialists who restructure,
-                negotiate, and reorganize outstanding obligations - so
-                they&apos;re never standing alone against a creditor.
+                Customize and save every choice in one private profile - your
+                funeral, transportation, and legal documents, ready the moment
+                your family needs them.
               </p>
             </div>
 
@@ -535,13 +534,13 @@ export default function Home() {
                 </div>
 
                 <div className="single-plan-col">
-                  <div className="single-plan-col-title">DEBT</div>
+                  <div className="single-plan-col-title">SECURE PROFILE</div>
                   <ul className="single-plan-list">
-                    <li>Connection to debt restructuring specialists</li>
-                    <li>Negotiation &amp; reorganization support</li>
-                    <li>Guidance through outstanding obligations</li>
-                    <li>$15,000 cash benefit for family runway</li>
-                    <li>Apartment / room cleanout coordination</li>
+                    <li>Customize your funeral, your way</li>
+                    <li>Save transportation preferences</li>
+                    <li>Store legal documents securely</li>
+                    <li>Private &amp; encrypted on your account</li>
+                    <li>Ready the moment family needs it</li>
                   </ul>
                 </div>
 
