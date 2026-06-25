@@ -17,7 +17,7 @@ function cannedReply(q: string): string {
   if (/wait|period|when.*cover|24 month|day 1|immediate|instant/i.test(t))
     return "Accidental death is covered from day 1. For natural causes, full benefits pay out after 24 months of premiums. During the first 24 months your family receives a pro-rated payout.";
   if (/sign.?up|join|start|how.*work|enroll|register|begin|get started/i.test(t))
-    return "Signing up takes about 8 minutes on your phone — no medical exam, just a 5-question health questionnaire. Tap the Start your subscription button on the plan card, or join the waitlist at the bottom of the page. We're launching soon.";
+    return "Signing up takes just a few minutes on your phone — no medical exam, just a 5-question health questionnaire. Tap the Start your subscription button on the plan card, or join the waitlist at the bottom of the page. We're launching soon.";
   if (/age|old|young|18|75|eligib/i.test(t))
     return "Finally Peace is available from age 18 to 75. The earlier you join, the simpler it is to have everything organized and saved for your family.";
   if (/exam|medical|health question|doctor|test/i.test(t))
@@ -65,7 +65,7 @@ Key facts:
 - Accidental death covered from day 1; natural causes after 24 months of premiums
 - Family bundle: 10% off when two adults in the same household subscribe
 - Available ages 18–75
-- Signup takes about 8 minutes on your phone
+- Signup takes just a few minutes on your phone
 
 Website navigation:
 - "What you get" section — the 4 main benefits (funeral, legal, secure profile, transport)

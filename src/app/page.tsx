@@ -621,7 +621,7 @@ export default function Home() {
                 application
               </div>
               <div className="col-atlas">
-                <span className="ic-check">✓</span>8 minutes on your phone
+                <span className="ic-check">✓</span>A few minutes on your phone
               </div>
             </div>
 
@@ -631,8 +631,8 @@ export default function Home() {
                 <span className="ic-x">×</span>2–4 weeks
               </div>
               <div className="col-atlas">
-                <span className="ic-check">✓</span>Minutes - simplified-issue,
-                no exam
+                <span className="ic-check">✓</span>Minutes - no exam, subject to
+                approval
               </div>
             </div>
 
